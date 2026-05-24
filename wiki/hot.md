@@ -1,7 +1,7 @@
 ---
 type: meta
 title: "Hot Cache"
-updated: 2026-04-24T13:10:00
+updated: 2026-05-22T00:00:00
 tags:
   - meta
   - hot-cache
@@ -20,9 +20,13 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 ## Last Updated
 
+2026-05-22: Ingested [[nvme-base-spec-2.3]] (784pp, ratified July 2025). 6 new pages: [[NVMe]], [[NVMe Queue Model]], [[NVMe Namespaces]], [[NVMe over Fabrics]], [[NVM Express Consortium]], [[nvme-base-spec-2.3]]. Addresses c-000015 through c-000020 assigned. Wiki now covers storage-systems domain. Key new features in Rev 2.3: Flexible Data Placement (FDP), Track Memory Changes, TLS 1.3 for NVMe-TCP, ZNS updates. poppler-utils installed on this machine to enable PDF rendering. Pages reorganized into source-named subfolders: wiki/concepts/nvme/, wiki/entities/nvme/, wiki/concepts/courage-to-be-disliked/, wiki/entities/courage-to-be-disliked/. Sources remain flat in wiki/sources/. SKILL.md updated with Source Slug Derivation rules and new subfolder placement logic for all future ingests.
+
+2026-05-21: Ingested [[courage-to-be-disliked]] (Hinglish PDF, 192 pages). 9 new pages: [[Alfred Adler]], [[Ichiro Kishimi]], [[Fumitake Koga]], [[Adlerian Psychology]], [[Teleology vs Etiology]], [[Separation of Tasks]], [[Community Feeling]], [[Inferiority Feelings]], [[courage-to-be-disliked]]. Addresses c-000006 through c-000014 assigned. Wiki now covers psychology domain (Adler/Kishimi/Koga) alongside its existing LLM/SEO domains. Also ran wiki-lint 2026-05-21: 20 issues found, 8 fixed (3 missing addresses, 5 dead-link fixes, 1 missing concept page E-commerce SEO created, 1 cross-ref gap). No orphan pages.
+
 2026-04-24 (late night): v1.6.0 public release notes shipped. `docs/releases/v1.6.0.md` (Karpathy-style, 346 lines) establishes the release-notes convention. Three original SVGs at `wiki/meta/dragonscale-{mechanism-overview,6-test-flow,frontier-graph}.svg` carry the visual load; Wikipedia dragon curve referenced by text link only (no binary vendoring). R4 codex verifier ACCEPT WITH FIXES, 3 wording fixes applied. User runs `gh release create v1.6.0 --notes-file docs/releases/v1.6.0.md` when ready. Commits `85515bb` (docs), plus wiki/meta/ auto-commits for SVGs.
 
-2026-04-24 (night): DragonScale end-to-end validation pass. Six-test menu run via Teams orchestration (codex gpt-5.4 for M1 dry-run, M1 commit, M4 autoresearch; chair for ollama pull, M2 allocate, M3 full tiling). All six green. First real fold committed (`wiki/folds/fold-k3-from-2026-04-23-to-2026-04-24-n8.md`, 115 lines, 8 children). First real tiling report at `wiki/meta/tiling-report-2026-04-24.md` (0 errors, 15 review pairs). M2 counter advanced 2 to 3, `c-000002` reserved-unassigned. M4 autoresearch filed 3 new concept pages (`Persistent Wiki Artifact`, `Source-First Synthesis`, `Query-Time Retrieval`) extending `[[How does the LLM Wiki pattern work?]]` with Karpathy gist + RAG + MemGPT + Obsidian docs as sources. v1.6.0 validated.
+2026-04-24 (night): DragonScale end-to-end validation pass. Six-test menu run via Teams orchestration (codex gpt-5.4 for M1 dry-run, M1 commit, M4 autoresearch; chair for ollama pull, M2 allocate, M3 full tiling). All six green. First real fold committed (`wiki/folds/fold-k3-from-2026-04-23-to-2026-04-24-n8.md`, 115 lines, 8 children). First real tiling report at `wiki/meta/tiling-report-2026-04-24.md` (0 errors, 15 review pairs). M2 counter advanced 2 to 3, `c-000002` reserved-unassigned. M4 autoresearch filed 3 new concept pages (`Persistent Wiki Artifact`, `Source-First Synthesis`, `Query-Time Retrieval`) extending `[[How does the LLM Wiki pattern work]]` with Karpathy gist + RAG + MemGPT + Obsidian docs as sources. v1.6.0 validated.
 
 2026-04-24 (evening): v1.6.0 closeout via Teams approach (chair-led, codex gpt-5.4 for sub-agents). 2 explorers (closeout gaps + doc surface). 6 bounded writes (non-overlapping scope): `docs/dragonscale-guide.md` (new, 563 lines), `wiki/meta/2026-04-24-v1.6.0-release-session.md` (new, 346 lines), `wiki/meta/boundary-frontier-2026-04-24.md` (first real M4 run artifact, new), `docs/install-guide.md` (1.5.0 to 1.6.0 + M4 callout + flat-extractive correction), `README.md` (parenthetical + guide link), `wiki/hot.md` (drift fixes). 1 adversarial verifier returned ACCEPT WITH FIXES; all 11 fixes applied in place. Docs commit `eb1562f`. `make test` green (74+ assertions). Still no git tags for v1.5.0 / v1.5.1 / v1.6.0. User requested gpt-5.5; API rejects it on this codex CLI; gpt-5.4 used throughout.
 

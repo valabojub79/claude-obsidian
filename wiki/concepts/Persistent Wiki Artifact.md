@@ -9,11 +9,12 @@ tags:
   - agent-memory
 status: developing
 related:
-  - "[[How does the LLM Wiki pattern work?]]"
+  - "[[How does the LLM Wiki pattern work]]"
   - "[[LLM Wiki Pattern]]"
   - "[[Compounding Knowledge]]"
   - "[[Source-First Synthesis]]"
   - "[[Query-Time Retrieval]]"
+address: c-000003
 ---
 
 # Persistent Wiki Artifact

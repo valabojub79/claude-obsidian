@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "8a12ce31e1fab776",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb138060682bb589",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9f94f992e74a310",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sources/courage-to-be-disliked.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "courage-to-be-disliked"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "34005918904132cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "08f4ca2337a14172",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "66636f9e129ac6c8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c3bb77f39311aebc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f198960b637ea18e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e3c26e0729d50e46",
+    "type": "split",
+    "children": [
+      {
+        "id": "a9240ce2fd274384",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "904a5899165981b2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "meta/boundary-frontier-2026-04-24.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for boundary-frontier-2026-04-24"
+            }
+          },
+          {
+            "id": "180eb1f80fb16c27",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "meta/boundary-frontier-2026-04-24.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from boundary-frontier-2026-04-24"
+            }
+          },
+          {
+            "id": "8526ac781049064d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6684c35d62119598",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0378788b2d2c037b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "meta/boundary-frontier-2026-04-24.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of boundary-frontier-2026-04-24"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "d9f94f992e74a310",
+  "lastOpenFiles": [
+    "hot.md.tmp.10834.fd09fae2409b",
+    "entities/courage-to-be-disliked/Fumitake Koga.md",
+    "entities/courage-to-be-disliked/Ichiro Kishimi.md",
+    "entities/courage-to-be-disliked/Alfred Adler.md",
+    "concepts/courage-to-be-disliked/Inferiority Feelings.md",
+    "concepts/courage-to-be-disliked/Community Feeling.md",
+    "concepts/courage-to-be-disliked/Separation of Tasks.md",
+    "concepts/courage-to-be-disliked/Teleology vs Etiology.md",
+    "concepts/courage-to-be-disliked/Adlerian Psychology.md",
+    "entities/nvme/NVM Express Consortium.md",
+    "concepts/nvme/NVMe over Fabrics.md",
+    "concepts/nvme/NVMe Namespaces.md",
+    "concepts/nvme/NVMe Queue Model.md",
+    "concepts/nvme/NVMe.md",
+    "entities/courage-to-be-disliked",
+    "entities/nvme",
+    "concepts/courage-to-be-disliked",
+    "concepts/nvme",
+    "hot.md.tmp.10834.a74625b12e2d",
+    "hot.md.tmp.10834.2be800f7c938",
+    "log.md.tmp.10834.0683242235c9",
+    "log.md.tmp.10834.3a725f56f66e",
+    "sources/_index.md.tmp.10834.e14a316e9fb5",
+    "entities/_index.md.tmp.10834.805e5575f38f",
+    "entities/NVM Express Consortium.md",
+    "concepts/NVMe over Fabrics.md",
+    "concepts/NVMe Namespaces.md",
+    "concepts/NVMe Queue Model.md",
+    "concepts/NVMe.md",
+    "sources/nvme-base-spec-2.3.md",
+    "index.md",
+    "sources/courage-to-be-disliked.md",
+    "concepts/Inferiority Feelings.md",
+    "entities/Alfred Adler.md",
+    "concepts/Community Feeling.md",
+    "concepts/Compounding Knowledge.md",
+    "canvases/youtube-explainer.canvas",
+    "canvases/welcome.canvas",
+    "canvases/main.canvas",
+    "canvases/claude-obsidian-presentation.canvas",
+    "Wiki Map.canvas"
+  ]
+}

@@ -22,8 +22,19 @@ All source pages — summaries of ingested documents, transcripts, articles, and
 
 ---
 
-## Transcripts
+## Books
 
+- [[courage-to-be-disliked]] — Koga + Kishimi (2013 / Hinglish). Adlerian psychology as Socratic dialogue; 5 nights covering teleology, task separation, community feeling.
+
+---
+
+## Specifications
+
+- [[nvme-base-spec-2.3]] — NVM Express Base Specification Rev 2.3 (July 2025). 784 pages. Covers NVMe architecture, queue model, namespaces, Fabrics, extended capabilities. — Koga + Kishimi (2013 / Hinglish). Adlerian psychology as Socratic dialogue; 5 nights covering teleology, task separation, community feeling.
+
+---
+
+## Transcripts
 
 ---
 

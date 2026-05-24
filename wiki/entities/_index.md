@@ -25,12 +25,15 @@ All entity pages — people, organizations, products, and tools.
 ## People
 
 - [[Andrej Karpathy]] — AI researcher, educator; originated the LLM Wiki pattern
+- [[Alfred Adler]] — Austrian psychiatrist (1870-1937); founder of Individual Psychology (Adlerian Psychology)
+- [[Ichiro Kishimi]] — Japanese philosopher; Adlerian counselor and translator; co-author of The Courage to be Disliked
+- [[Fumitake Koga]] — Japanese writer; co-author of The Courage to be Disliked
 
 ---
 
 ## Organizations
 
-<!-- Add organization pages here -->
+- [[NVM Express Consortium]] — standards body publishing NVMe specifications (nvmexpress.org)
 
 ---
 

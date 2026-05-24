@@ -9,11 +9,12 @@ tags:
   - provenance
 status: developing
 related:
-  - "[[How does the LLM Wiki pattern work?]]"
+  - "[[How does the LLM Wiki pattern work]]"
   - "[[LLM Wiki Pattern]]"
   - "[[Compounding Knowledge]]"
   - "[[Persistent Wiki Artifact]]"
   - "[[Query-Time Retrieval]]"
+address: c-000005
 ---
 
 # Source-First Synthesis

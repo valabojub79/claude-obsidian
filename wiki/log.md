@@ -1,7 +1,7 @@
 ---
 type: meta
 title: "Operation Log"
-updated: 2026-04-08
+updated: 2026-05-22
 tags:
   - meta
   - log
@@ -20,6 +20,26 @@ Navigation: [[index]] | [[hot]] | [[overview]]
 Append-only. New entries go at the TOP. Never edit past entries.
 
 Entry format: `## [YYYY-MM-DD] operation | Title`
+
+---
+
+## [2026-05-22] ingest | NVM Express Base Specification, Revision 2.3
+- Source: `.raw/NVM-Express-Base-Specification-Revision-2.3-2025.08.01-Ratified.pdf`
+- Summary: [[nvme-base-spec-2.3]]
+- Pages created: [[nvme-base-spec-2.3]], [[NVMe]], [[NVMe Queue Model]], [[NVMe Namespaces]], [[NVMe over Fabrics]], [[NVM Express Consortium]]
+- Pages updated: [[index]], [[concepts/_index]], [[entities/_index]], [[sources/_index]], [[log]], [[hot]]
+- Key insight: NVMe's performance advantage is structural — 65,535 queue pairs vs AHCI's single 32-entry queue; the SQ/CQ phase-tag polling model eliminates shared-state serialization; namespaces decouple logical LBA space from physical media hierarchy (Endurance Groups, NVM Sets).
+
+---
+
+## [2026-05-21] ingest | The Courage to be Disliked (Hinglish)
+- Source: `.raw/The Courage to be Disliked - Hinglish (2).pdf`
+- Summary: [[courage-to-be-disliked]]
+- Pages created: [[courage-to-be-disliked]], [[Alfred Adler]], [[Ichiro Kishimi]], [[Fumitake Koga]], [[Adlerian Psychology]], [[Teleology vs Etiology]], [[Separation of Tasks]], [[Community Feeling]], [[Inferiority Feelings]]
+- Pages updated: [[index]], [[concepts/_index]], [[entities/_index]], [[sources/_index]], [[log]], [[hot]]
+- Key insight: Adler's teleology claim — behavior is explained by current goals, not past causes — makes change available at any moment; all suffering is interpersonal; freedom = being disliked.
+
+---
 
 Parse recent entries: `grep "^## \[" wiki/log.md | head -10`
 
@@ -50,7 +70,7 @@ Parse recent entries: `grep "^## \[" wiki/log.md | head -10`
 - Scope: six-test menu the user approved. Codex gpt-5.4 for T1/T4/T6 (sub-agent delegation); chair for T0/T2/T3 (one-shot shell) and all integration (index, log, hot, commit).
 - Style: all new content uses colons or parens instead of em-dashes. Pre-existing em-dashes in index entries and wiki/concepts/_index.md left as-is (clean-room boundary; deferred to F-slice style pass).
 - Tests still green: `make test` passes (74+ assertions).
-- Integration: chair added the 3 new concepts to `wiki/index.md` and `wiki/concepts/_index.md` with colon-style descriptions so the fresh pages are discoverable. The cluster extends `[[How does the LLM Wiki pattern work?]]` and cross-references `[[LLM Wiki Pattern]]`.
+- Integration: chair added the 3 new concepts to `wiki/index.md` and `wiki/concepts/_index.md` with colon-style descriptions so the fresh pages are discoverable. The cluster extends `[[How does the LLM Wiki pattern work]]` and cross-references `[[LLM Wiki Pattern]]`.
 - Next recommended slice: either (G) commit this test batch and declare v1.6.0 validated, or (H) run a second fold k=3 now that 8 newer entries exist above this one and close the hierarchical-fold-not-yet-supported loop in a future phase.
 
 ## [2026-04-24] save | v1.6.0 closeout (Teams, chair-led)

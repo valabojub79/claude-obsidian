@@ -94,6 +94,26 @@ Use cases: whiteboard photos, screenshots, diagrams, infographics, document scan
 
 ---
 
+## Source Slug Derivation
+
+Every source gets a short **source slug** that becomes the subfolder name under `wiki/concepts/` and `wiki/entities/`.
+
+Derivation rules (apply in order):
+1. Take the filename stem (strip extension).
+2. Lowercase. Replace spaces, underscores, parentheses with hyphens. Remove leading/trailing hyphens.
+3. Strip trailing version numbers and date segments (e.g., `-2.3`, `-2025.08.01`, `-ratified`, `-(2)`).
+4. For known technical abbreviations, use the abbreviation: `nvm-express*` → `nvme`, `dns*` → `dns`, `http*` → `http`, etc.
+5. If the result is longer than ~30 characters, take only the most significant words from the front.
+
+Examples:
+- `NVM-Express-Base-Specification-Revision-2.3-2025.08.01-Ratified.pdf` → `nvme`
+- `The Courage to be Disliked - Hinglish (2).pdf` → `courage-to-be-disliked`
+- `gpt-4o-system-card-2024-05.pdf` → `gpt-4o-system-card`
+
+If the slug is ambiguous, ask the user to confirm before creating pages.
+
+---
+
 ## Single Source Ingest
 
 Trigger: user drops a file into `.raw/` or pastes content.
@@ -101,15 +121,16 @@ Trigger: user drops a file into `.raw/` or pastes content.
 Steps:
 
 1. **Read** the source completely. Do not skim.
-2. **Discuss** key takeaways with the user. Ask: "What should I emphasize? How granular?" Skip this if the user says "just ingest it."
-3. **Create** source summary in `wiki/sources/`. Use the source frontmatter schema from `references/frontmatter.md`. Assign an address per the **Address Assignment** section below.
-4. **Create or update** entity pages for every person, org, product, and repo mentioned. One page per entity. Assign addresses to new entity pages.
-5. **Create or update** concept pages for significant ideas and frameworks. Assign addresses to new concept pages.
-6. **Update** relevant domain page(s) and their `_index.md` sub-indexes.
-7. **Update** `wiki/overview.md` if the big picture changed.
-8. **Update** `wiki/index.md`. Add entries for all new pages.
-9. **Update** `wiki/hot.md` with this ingest's context.
-10. **Append** to `wiki/log.md` (new entries at the TOP):
+2. **Derive the source slug** using the Source Slug Derivation rules above.
+3. **Discuss** key takeaways with the user. Ask: "What should I emphasize? How granular?" Skip this if the user says "just ingest it."
+4. **Create** source summary in `wiki/sources/` (flat; one file per source). Use the source frontmatter schema from `references/frontmatter.md`. Assign an address per the **Address Assignment** section below.
+5. **Create or update** entity pages in `wiki/entities/<source-slug>/`. One page per entity. Assign addresses to new entity pages.
+6. **Create or update** concept pages in `wiki/concepts/<source-slug>/`. Assign addresses to new concept pages.
+7. **Update** relevant domain page(s) and their `_index.md` sub-indexes.
+8. **Update** `wiki/overview.md` if the big picture changed.
+9. **Update** `wiki/index.md`. Add entries for all new pages.
+10. **Update** `wiki/hot.md` with this ingest's context.
+11. **Append** to `wiki/log.md` (new entries at the TOP):
     ```markdown
     ## [YYYY-MM-DD] ingest | Source Title
     - Source: `.raw/articles/filename.md`
@@ -118,7 +139,7 @@ Steps:
     - Pages updated: [[Page 3]], [[Page 4]]
     - Key insight: One sentence on what is new.
     ```
-11. **Check for contradictions.** If new info conflicts with existing pages, add `> [!contradiction]` callouts on both pages.
+12. **Check for contradictions.** If new info conflicts with existing pages, add `> [!contradiction]` callouts on both pages.
 
 ---
 
@@ -243,8 +264,9 @@ ADDR=$(./scripts/allocate-address.sh)
 {
   "sources": { ... },
   "address_map": {
-    "wiki/concepts/Example.md": "c-000042",
-    "wiki/entities/Another.md": "c-000043"
+    "wiki/sources/example-source.md": "c-000042",
+    "wiki/concepts/example-source/Example.md": "c-000043",
+    "wiki/entities/example-source/Another.md": "c-000044"
   }
 }
 ```

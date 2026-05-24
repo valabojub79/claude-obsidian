@@ -23,7 +23,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-04-15 | Total pages: 34 | Sources ingested: 2
+Last updated: 2026-05-22 | Total pages: 52 | Sources ingested: 4
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[getting-started]]
 
@@ -31,6 +31,15 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Concepts
 
+- [[NVMe]] — Non-Volatile Memory Express; PCIe/Fabrics storage protocol; architecture, registers, command sets (status: developing)
+- [[NVMe Queue Model]] — Submission Queue/Completion Queue pair mechanism; PRP/SGL data transfer; arbitration (status: developing)
+- [[NVMe Namespaces]] — LBA address spaces; storage hierarchy; endurance groups; NVM sets; ANA (status: developing)
+- [[NVMe over Fabrics]] — NVMe-oF; TCP/RDMA/FC transports; Discovery controller; connect/disconnect; TLS (status: developing)
+- [[Adlerian Psychology]] — Individual Psychology; teleology, social interest, lifestyle, life tasks (status: developing)
+- [[Teleology vs Etiology]] — Adler's core break from Freud: behavior explained by goals not causes (status: developing)
+- [[Separation of Tasks]] — whose responsibility is this? Adlerian path to freedom in relationships (status: developing)
+- [[Community Feeling]] — Gemeinschaftsgefuhl; belonging + contribution = happiness (status: developing)
+- [[Inferiority Feelings]] — universal human driver; healthy feeling vs. pathological inferiority complex (status: developing)
 - [[LLM Wiki Pattern]] — the pattern for building persistent, compounding knowledge bases using LLMs (status: mature)
 - [[Hot Cache]] — ~500-word session context file, updated after every ingest and session (status: mature)
 - [[Compounding Knowledge]] — why wiki knowledge grows more valuable over time, unlike RAG (status: mature)
@@ -49,6 +58,10 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Entities
 
+- [[NVM Express Consortium]] — standards body publishing the NVMe specification family (status: developing)
+- [[Alfred Adler]] — Austrian psychiatrist (1870-1937); founder of Individual Psychology (status: developing)
+- [[Ichiro Kishimi]] — Japanese philosopher, Adlerian counselor, co-author of The Courage to be Disliked (status: developing)
+- [[Fumitake Koga]] — Japanese writer, co-author of The Courage to be Disliked (status: developing)
 - [[Andrej Karpathy]] — AI researcher, creator of the LLM Wiki pattern, former Tesla AI director (status: developing)
 - [[Ar9av-obsidian-wiki]] — multi-agent compatible LLM Wiki plugin; delta tracking manifest (status: current)
 - [[Nexus-claudesidian-mcp]] — native Obsidian plugin + MCP bridge; workspace memory, task management (status: current)
@@ -62,6 +75,8 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Sources
 
+- [[nvme-base-spec-2.3]] — 2026-05-22 | NVMe Base Spec Rev 2.3 (784pp) | 6 wiki pages created
+- [[courage-to-be-disliked]] — 2026-05-21 | Koga + Kishimi (Hinglish) | 9 wiki pages created
 - [[claude-obsidian-ecosystem-research]] — 2026-04-08 | web research across 16+ repos | 8 wiki pages created
 
 ---

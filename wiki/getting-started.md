@@ -97,4 +97,4 @@ After 3–5 ingests, the graph starts to look like a real knowledge network. Cro
 
 ---
 
-*Built on the [LLM Wiki pattern](https://github.com/karpathy) by Andrej Karpathy.*
+*Built on the [LLM Wiki pattern](https://github.com/karpathy) by [[Andrej Karpathy]].*
