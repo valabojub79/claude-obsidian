@@ -4,6 +4,8 @@ title: "NVM Express Base Specification, Revision 2.3"
 author: "NVM Express, Inc."
 date_published: 2025-07-31
 date_ingested: 2026-05-22
+created: 2026-05-22
+updated: 2026-05-22
 language: English
 format: specification
 tags:
