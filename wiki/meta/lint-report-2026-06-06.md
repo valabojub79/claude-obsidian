@@ -26,16 +26,17 @@ None. Every non-meta page has at least one inbound wikilink.
 
 ## Dead Links
 
-Genuine (all pre-existing, none from this batch):
+- **`Wiki Map`** — FIXED. Was referenced in `getting-started`, `hot`, `index` (x2), `concepts/_index`, and many pages' `related:` frontmatter, but `wiki/Wiki Map.md` did not exist. Created `wiki/Wiki Map.md` as a domain navigation hub. 0 remaining dead refs.
 
-- **[[Wiki Map]]** — referenced in [[getting-started]], [[hot]], [[index]] (x2), [[concepts/_index]], and in many pages' `related:` frontmatter, but `wiki/Wiki Map.md` does not exist. This is the highest-value fix: it is a navigation target across the vault. Suggest: create a `Wiki Map` page (or remove the references).
-- **[[Claude Obsidian]]**, **[[Claude Canvas]]**, **[[Rankenstein]]**, **[[Karpathy LLM Wiki Pattern]]** — all in the historical note `wiki/meta/2026-04-10-backlink-empire-session.md`. Suggest: leave as-is (session notes are point-in-time) or convert to plain text.
-- **[[wiki-fold]]** (x3), **[[fold-template]]** — in `wiki/folds/fold-k3-...md`; these name a skill and a template, not wiki pages. Suggest: leave (they document tooling) or unlink.
+Remaining (pre-existing, left intentionally per your call):
+
+- **`Claude Obsidian`**, **`Claude Canvas`**, **`Rankenstein`**, **`Karpathy LLM Wiki Pattern`** — in the historical note `wiki/meta/2026-04-10-backlink-empire-session.md`. Left as-is (session notes are point-in-time).
+- **`wiki-fold`** (x3), **`fold-template`** — in `wiki/folds/fold-k3-...md`; these name a skill and a template, not wiki pages. Left as documentation of tooling.
 
 False positives (link resolves to a non-`.md` file, no action):
 
-- [[dashboard.base]] — resolves to `wiki/meta/dashboard.base`.
-- [[claude-obsidian-presentation]] — resolves to `wiki/canvases/claude-obsidian-presentation.canvas`.
+- `dashboard.base` — resolves to `wiki/meta/dashboard.base`.
+- `claude-obsidian-presentation` — resolves to `wiki/canvases/claude-obsidian-presentation.canvas`.
 
 ## Missing Pages (informational, by design)
 
