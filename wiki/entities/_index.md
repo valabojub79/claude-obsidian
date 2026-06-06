@@ -28,6 +28,9 @@ All entity pages — people, organizations, products, and tools.
 - [[Alfred Adler]] — Austrian psychiatrist (1870-1937); founder of Individual Psychology (Adlerian Psychology)
 - [[Ichiro Kishimi]] — Japanese philosopher; Adlerian counselor and translator; co-author of The Courage to be Disliked
 - [[Fumitake Koga]] — Japanese writer; co-author of The Courage to be Disliked
+- [[Kurt Lewin]] — social psychologist; 1939 study founding the study of leadership styles
+- [[Bernard M. Bass]] — formalized transformational vs transactional leadership
+- [[Robert K. Greenleaf]] — coined servant leadership ("The Servant as Leader", 1970)
 
 ---
 
