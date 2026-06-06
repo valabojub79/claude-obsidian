@@ -89,6 +89,11 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Sources
 
+- [[leadership-styles-muse]] — 2026-05-22 | The Muse, Kat Boogaard | 10-style catalog
+- [[determine-your-leadership-style-harvard]] — 2026-05-22 | Harvard DCE, Lian Parsons | style is not predetermined
+- [[leadership-styles-imd]] — 2026-05-22 | IMD | 6 styles + leadership agility
+- [[leadership-styles-managing-life-at-work]] — 2026-05-22 | research-grounded four-category taxonomy
+- [[leadership-styles-simply-psychology]] — 2026-05-22 | Charlotte Nickerson | Lewin 1939 origin
 - [[nvme-base-spec-2.3]] — 2026-05-22 | NVMe Base Spec Rev 2.3 (784pp) | 6 wiki pages created
 - [[courage-to-be-disliked]] — 2026-05-21 | Koga + Kishimi (Hinglish) | 9 wiki pages created
 - [[claude-obsidian-ecosystem-research]] — 2026-04-08 | web research across 16+ repos | 8 wiki pages created
