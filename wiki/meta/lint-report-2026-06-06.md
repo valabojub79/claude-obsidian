@@ -14,9 +14,12 @@ Run after the 5-source leadership-styles batch ingest (c-000021 through c-000039
 ## Summary
 - Pages scanned: 82 (.md under `wiki/`)
 - Issues found: 8 actionable (3 dead-link clusters, 1 missing nav page, 2 frontmatter gaps, plus informational items)
-- Auto-fixed: 0 (awaiting your go-ahead)
-- Needs review: see below
+- Auto-fixed: 3 (created `Wiki Map.md`; added `created`/`updated` to `nvme-base-spec-2.3` and `courage-to-be-disliked`)
+- Needs review: 2 dead-link clusters left intentionally (historical session note + fold-page tooling refs)
 - **The leadership-styles batch is clean**: 0 orphans, 0 dead links, 0 address errors, 0 frontmatter gaps among the 19 new pages.
+
+> [!note] Note on link styling in this report
+> Page names referenced as examples below are written in backticks, not live `[[wikilinks]]`, so this report does not itself introduce the dead links it describes.
 
 ## Orphan Pages
 None. Every non-meta page has at least one inbound wikilink.
