@@ -3,6 +3,82 @@
   "created": "2026-04-23",
   "description": "Ingest delta tracker and address map for the claude-obsidian vault. Do not hand-edit; wiki-ingest maintains this.",
   "sources": {
+    ".raw/articles/common-leadership-styles-with-pros-and-cons-2026-05-22.md": {
+      "hash": "PENDING",
+      "ingested_at": "2026-05-22",
+      "source_url": "https://www.themuse.com/advice/common-leadership-styles-with-pros-and-cons",
+      "pages_created": [
+        "wiki/sources/leadership-styles-muse.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/concepts/_index.md",
+        "wiki/entities/_index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/articles/determine-your-leadership-style-harvard-2026-05-22.md": {
+      "hash": "PENDING",
+      "ingested_at": "2026-05-22",
+      "source_url": "https://professional.dce.harvard.edu/blog/how-to-determine-what-my-leadership-style-is/",
+      "pages_created": [
+        "wiki/sources/determine-your-leadership-style-harvard.md"
+      ],
+      "pages_updated": []
+    },
+    ".raw/articles/leadership-styles-imd-2026-05-22.md": {
+      "hash": "PENDING",
+      "ingested_at": "2026-05-22",
+      "source_url": "https://www.imd.org/blog/leadership/leadership-styles/",
+      "pages_created": [
+        "wiki/sources/leadership-styles-imd.md"
+      ],
+      "pages_updated": []
+    },
+    ".raw/articles/leadership-styles-managing-life-at-work-2026-05-22.md": {
+      "hash": "PENDING",
+      "ingested_at": "2026-05-22",
+      "source_url": "https://managinglifeatwork.com/leadership-styles-definition-types-and-examples/",
+      "pages_created": [
+        "wiki/sources/leadership-styles-managing-life-at-work.md"
+      ],
+      "pages_updated": []
+    },
+    ".raw/articles/leadership-styles-simply-psychology-2026-05-22.md": {
+      "hash": "PENDING",
+      "ingested_at": "2026-05-22",
+      "source_url": "https://www.simplypsychology.org/leadership-styles.html",
+      "pages_created": [
+        "wiki/sources/leadership-styles-simply-psychology.md"
+      ],
+      "pages_updated": []
+    },
+    "_leadership-styles-shared-pages": {
+      "note": "Concept and entity pages below were synthesized across all five leadership-styles sources in the 2026-05-22 batch; they are shared, not owned by a single source file.",
+      "ingested_at": "2026-05-22",
+      "pages_created": [
+        "wiki/concepts/leadership-styles/Leadership Style.md",
+        "wiki/concepts/leadership-styles/Lewin's Leadership Styles.md",
+        "wiki/concepts/leadership-styles/Autocratic Leadership.md",
+        "wiki/concepts/leadership-styles/Democratic Leadership.md",
+        "wiki/concepts/leadership-styles/Laissez-Faire Leadership.md",
+        "wiki/concepts/leadership-styles/Transactional Leadership.md",
+        "wiki/concepts/leadership-styles/Transformational Leadership.md",
+        "wiki/concepts/leadership-styles/Servant Leadership.md",
+        "wiki/concepts/leadership-styles/Coaching Leadership.md",
+        "wiki/concepts/leadership-styles/Bureaucratic Leadership.md",
+        "wiki/concepts/leadership-styles/Situational Leadership.md",
+        "wiki/entities/leadership-styles/Kurt Lewin.md",
+        "wiki/entities/leadership-styles/Bernard M. Bass.md",
+        "wiki/entities/leadership-styles/Robert K. Greenleaf.md"
+      ],
+      "not_ingested": [
+        "https://www.forbes.com/advisor/business/management-styles/ (crawler blocked)",
+        "https://www.verywellmind.com/leadership-styles-2795312 (crawler blocked)"
+      ]
+    },
     ".raw/NVM-Express-Base-Specification-Revision-2.3-2025.08.01-Ratified.pdf": {
       "hash": "5fa8934e32eb959106a057edd6f44d47",
       "ingested_at": "2026-05-22",
@@ -66,6 +142,25 @@
     "wiki/concepts/nvme/NVMe Queue Model.md": "c-000017",
     "wiki/concepts/nvme/NVMe Namespaces.md": "c-000018",
     "wiki/concepts/nvme/NVMe over Fabrics.md": "c-000019",
-    "wiki/entities/nvme/NVM Express Consortium.md": "c-000020"
+    "wiki/entities/nvme/NVM Express Consortium.md": "c-000020",
+    "wiki/sources/leadership-styles-muse.md": "c-000021",
+    "wiki/sources/determine-your-leadership-style-harvard.md": "c-000022",
+    "wiki/sources/leadership-styles-imd.md": "c-000023",
+    "wiki/sources/leadership-styles-managing-life-at-work.md": "c-000024",
+    "wiki/sources/leadership-styles-simply-psychology.md": "c-000025",
+    "wiki/concepts/leadership-styles/Leadership Style.md": "c-000026",
+    "wiki/concepts/leadership-styles/Lewin's Leadership Styles.md": "c-000027",
+    "wiki/concepts/leadership-styles/Autocratic Leadership.md": "c-000028",
+    "wiki/concepts/leadership-styles/Democratic Leadership.md": "c-000029",
+    "wiki/concepts/leadership-styles/Laissez-Faire Leadership.md": "c-000030",
+    "wiki/concepts/leadership-styles/Transactional Leadership.md": "c-000031",
+    "wiki/concepts/leadership-styles/Transformational Leadership.md": "c-000032",
+    "wiki/concepts/leadership-styles/Servant Leadership.md": "c-000033",
+    "wiki/concepts/leadership-styles/Coaching Leadership.md": "c-000034",
+    "wiki/concepts/leadership-styles/Bureaucratic Leadership.md": "c-000035",
+    "wiki/concepts/leadership-styles/Situational Leadership.md": "c-000036",
+    "wiki/entities/leadership-styles/Kurt Lewin.md": "c-000037",
+    "wiki/entities/leadership-styles/Bernard M. Bass.md": "c-000038",
+    "wiki/entities/leadership-styles/Robert K. Greenleaf.md": "c-000039"
   }
 }
