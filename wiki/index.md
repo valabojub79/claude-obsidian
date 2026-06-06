@@ -31,6 +31,17 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Concepts
 
+- [[Leadership Style]] — hub: behavior patterns leaders adopt; no single best style, effectiveness is contextual (status: developing)
+- [[Lewin's Leadership Styles]] — foundational 1939 typology: autocratic, democratic, laissez-faire (status: developing)
+- [[Autocratic Leadership]] — leader decides alone, expects compliance; fast but stifling (status: developing)
+- [[Democratic Leadership]] — participative, shared decision-making; most-cited style in the batch (status: developing)
+- [[Laissez-Faire Leadership]] — delegative, hands-off; great for experts, harmful for dependent teams (status: developing)
+- [[Transactional Leadership]] — rewards/penalties for performance; contingent reward + management by exception (status: developing)
+- [[Transformational Leadership]] — inspire beyond self-interest toward a vision; Bass's four dimensions (status: developing)
+- [[Servant Leadership]] — serve the team first; Greenleaf; claimed most effective in the batch (status: developing)
+- [[Coaching Leadership]] — develop individuals' strengths; Nadella-at-Microsoft example (status: developing)
+- [[Bureaucratic Leadership]] — rules, hierarchy, process; impersonal authority (status: developing)
+- [[Situational Leadership]] — adapt style to the moment; the "leadership agility" thesis (status: developing)
 - [[NVMe]] — Non-Volatile Memory Express; PCIe/Fabrics storage protocol; architecture, registers, command sets (status: developing)
 - [[NVMe Queue Model]] — Submission Queue/Completion Queue pair mechanism; PRP/SGL data transfer; arbitration (status: developing)
 - [[NVMe Namespaces]] — LBA address spaces; storage hierarchy; endurance groups; NVM sets; ANA (status: developing)
