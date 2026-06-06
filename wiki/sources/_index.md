@@ -40,7 +40,13 @@ All source pages — summaries of ingested documents, transcripts, articles, and
 
 ## Articles
 
-<!-- Add article source pages here -->
+Leadership-styles survey, ingested 2026-05-22 (five sources; Forbes and VeryWellMind blocked the crawler and were not ingested):
+
+- [[leadership-styles-muse]] — The Muse, Kat Boogaard. 10-style practitioner catalog.
+- [[determine-your-leadership-style-harvard]] — Harvard DCE, Lian Parsons. Style is not predetermined; how to diagnose your own.
+- [[leadership-styles-imd]] — IMD. Six styles plus "leadership agility."
+- [[leadership-styles-managing-life-at-work]] — research-grounded four-category taxonomy.
+- [[leadership-styles-simply-psychology]] — Charlotte Nickerson. Lewin 1939 origin story.
 
 ---
 
