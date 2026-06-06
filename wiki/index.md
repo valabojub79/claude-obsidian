@@ -69,6 +69,9 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Entities
 
+- [[Kurt Lewin]] — social psychologist; 1939 study that founded the study of leadership styles (status: developing)
+- [[Bernard M. Bass]] — scholar who formalized transformational vs transactional leadership (status: developing)
+- [[Robert K. Greenleaf]] — coined servant leadership ("The Servant as Leader", 1970) (status: developing)
 - [[NVM Express Consortium]] — standards body publishing the NVMe specification family (status: developing)
 - [[Alfred Adler]] — Austrian psychiatrist (1870-1937); founder of Individual Psychology (status: developing)
 - [[Ichiro Kishimi]] — Japanese philosopher, Adlerian counselor, co-author of The Courage to be Disliked (status: developing)
