@@ -59,4 +59,22 @@ All concept pages — ideas, patterns, and frameworks extracted from sources.
 
 ---
 
+## Leadership
+
+Five-source survey ingested 2026-05-22. Pages live in `wiki/concepts/leadership-styles/`.
+
+- [[Leadership Style]] — hub: behavior patterns leaders adopt; no single best style; the four-category taxonomy and cross-source map (developing)
+- [[Lewin's Leadership Styles]] — foundational 1939 typology: autocratic, democratic, laissez-faire (developing)
+- [[Autocratic Leadership]] — leader decides alone, expects compliance (developing)
+- [[Democratic Leadership]] — participative, shared decision-making (developing)
+- [[Laissez-Faire Leadership]] — delegative, hands-off (developing)
+- [[Transactional Leadership]] — rewards/penalties for performance (developing)
+- [[Transformational Leadership]] — inspire beyond self-interest toward a vision (developing)
+- [[Servant Leadership]] — serve the team first; Greenleaf (developing)
+- [[Coaching Leadership]] — develop individuals' strengths (developing)
+- [[Bureaucratic Leadership]] — rules, hierarchy, process (developing)
+- [[Situational Leadership]] — adapt style to the moment; leadership agility (developing)
+
+---
+
 ## Add new concepts here as they are extracted from sources.
