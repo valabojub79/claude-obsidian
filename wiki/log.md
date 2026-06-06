@@ -23,6 +23,15 @@ Entry format: `## [YYYY-MM-DD] operation | Title`
 
 ---
 
+## [2026-05-22] batch ingest | Leadership Styles (5-source survey)
+- Sources: `.raw/articles/common-leadership-styles-with-pros-and-cons-2026-05-22.md`, `determine-your-leadership-style-harvard-2026-05-22.md`, `leadership-styles-imd-2026-05-22.md`, `leadership-styles-managing-life-at-work-2026-05-22.md`, `leadership-styles-simply-psychology-2026-05-22.md`
+- Summaries: [[leadership-styles-muse]], [[determine-your-leadership-style-harvard]], [[leadership-styles-imd]], [[leadership-styles-managing-life-at-work]], [[leadership-styles-simply-psychology]]
+- Pages created (19): 5 source pages; concepts [[Leadership Style]], [[Lewin's Leadership Styles]], [[Autocratic Leadership]], [[Democratic Leadership]], [[Laissez-Faire Leadership]], [[Transactional Leadership]], [[Transformational Leadership]], [[Servant Leadership]], [[Coaching Leadership]], [[Bureaucratic Leadership]], [[Situational Leadership]]; entities [[Kurt Lewin]], [[Bernard M. Bass]], [[Robert K. Greenleaf]]
+- Pages updated: [[index]], [[concepts/_index]], [[entities/_index]], [[sources/_index]], [[log]], [[hot]]
+- Addresses: c-000021 through c-000039. First batch to use the new source-named subfolders (`wiki/concepts/leadership-styles/`, `wiki/entities/leadership-styles/`).
+- Key insight: all five sources converge on one thesis: no single best style, effectiveness is contextual, and style is not predetermined but can be developed (situational leadership / leadership agility).
+- Not ingested: forbes.com/advisor/business/management-styles and verywellmind.com/leadership-styles-2795312 both block the Anthropic crawler.
+
 ## [2026-05-22] ingest | NVM Express Base Specification, Revision 2.3
 - Source: `.raw/NVM-Express-Base-Specification-Revision-2.3-2025.08.01-Ratified.pdf`
 - Summary: [[nvme-base-spec-2.3]]
