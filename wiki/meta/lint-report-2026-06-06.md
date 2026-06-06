@@ -49,8 +49,10 @@ No action needed unless a future ingest adds corroborating sources.
 
 ## Frontmatter Gaps
 
-- [[nvme-base-spec-2.3]]: missing `created`, `updated` (pre-existing, from the 2026-05-22 NVMe ingest).
-- [[courage-to-be-disliked]]: missing `created`, `updated` (pre-existing, from the 2026-05-21 ingest).
+- `nvme-base-spec-2.3`: FIXED. Added `created`/`updated` (2026-05-22), preserving existing `date_published`/`date_ingested`.
+- `courage-to-be-disliked`: FIXED. Added `created`/`updated` (2026-05-21).
+
+0 frontmatter gaps remain across all non-meta pages.
 
 ## Stale Claims / Contradictions
 None new. One intentional `> [!contradiction]` callout exists on [[Laissez-Faire Leadership]] (practitioner sources call it empowering; the academic source calls it "severely detrimental") — this is a documented tension, not a defect.
