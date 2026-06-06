@@ -4,6 +4,8 @@ title: "The Courage to be Disliked (Hinglish)"
 author: "Fumitake Koga, Ichiro Kishimi"
 date_published: 2013
 date_ingested: 2026-05-21
+created: 2026-05-21
+updated: 2026-05-21
 language: Hinglish
 format: book
 tags:
