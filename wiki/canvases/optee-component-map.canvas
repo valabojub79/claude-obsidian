@@ -1,0 +1,279 @@
+{
+	"nodes": [
+		{
+			"id": "grp-entities",
+			"type": "group",
+			"label": "Entities (real repos / binaries)",
+			"x": -724,
+			"y": -724,
+			"width": 1448,
+			"height": 478,
+			"color": "6"
+		},
+		{
+			"id": "grp-concepts",
+			"type": "group",
+			"label": "Concepts (mechanisms)",
+			"x": -724,
+			"y": -174,
+			"width": 1478,
+			"height": 458,
+			"color": "2"
+		},
+		{
+			"id": "title",
+			"type": "text",
+			"text": "# OP-TEE Component Map\nContext graph: how the pieces in this checkout relate. Blue-gray = entities (real repos/binaries), green = concepts (mechanisms).",
+			"x": -724,
+			"y": -894,
+			"width": 1478,
+			"height": 120
+		},
+		{
+			"id": "buildrepo",
+			"type": "text",
+			"x": -130,
+			"y": -700,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[OP-TEE Build Repo]]**"
+		},
+		{
+			"id": "tfa",
+			"type": "text",
+			"x": -700,
+			"y": -500,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[Trusted Firmware-A]]**"
+		},
+		{
+			"id": "opteeos",
+			"type": "text",
+			"x": -130,
+			"y": -500,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[OP-TEE OS]]**"
+		},
+		{
+			"id": "uboot",
+			"type": "text",
+			"x": 440,
+			"y": -500,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[U-Boot]]**"
+		},
+		{
+			"id": "qemu",
+			"type": "text",
+			"x": -700,
+			"y": -350,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[QEMU]]**"
+		},
+		{
+			"id": "client",
+			"type": "text",
+			"x": -130,
+			"y": -350,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[optee_client]]**"
+		},
+		{
+			"id": "buildroot",
+			"type": "text",
+			"x": 440,
+			"y": -350,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[Buildroot]]**"
+		},
+		{
+			"id": "bootflow",
+			"type": "text",
+			"x": -130,
+			"y": -150,
+			"width": 280,
+			"height": 90,
+			"color": "2",
+			"text": "**[[OP-TEE Boot Flow]]**"
+		},
+		{
+			"id": "buildsys",
+			"type": "text",
+			"x": -700,
+			"y": 30,
+			"width": 260,
+			"height": 80,
+			"color": "2",
+			"text": "**[[OP-TEE Build System]]**"
+		},
+		{
+			"id": "secboot",
+			"type": "text",
+			"x": -130,
+			"y": 30,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Secure Boot Chain of Trust]]**"
+		},
+		{
+			"id": "normsec",
+			"type": "text",
+			"x": 450,
+			"y": 30,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Normal World vs Secure World]]**"
+		},
+		{
+			"id": "coldboot",
+			"type": "text",
+			"x": -130,
+			"y": 180,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[TEE Core Cold Boot]]**"
+		},
+		{
+			"id": "codingstd",
+			"type": "text",
+			"x": -700,
+			"y": 180,
+			"width": 260,
+			"height": 80,
+			"color": "2",
+			"text": "**[[OP-TEE Coding Standards]]**"
+		},
+		{
+			"id": "contrib",
+			"type": "text",
+			"x": 450,
+			"y": 180,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[OP-TEE Contribution Workflow]]**"
+		}
+	],
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "buildrepo",
+			"toNode": "tfa",
+			"label": "orchestrates"
+		},
+		{
+			"id": "e2",
+			"fromNode": "buildrepo",
+			"toNode": "opteeos",
+			"label": "orchestrates"
+		},
+		{
+			"id": "e3",
+			"fromNode": "buildrepo",
+			"toNode": "uboot",
+			"label": "orchestrates"
+		},
+		{
+			"id": "e4",
+			"fromNode": "buildrepo",
+			"toNode": "buildsys",
+			"label": "implemented by"
+		},
+		{
+			"id": "e5",
+			"fromNode": "qemu",
+			"toNode": "tfa",
+			"label": "-bios bl1.bin"
+		},
+		{
+			"id": "e6",
+			"fromNode": "tfa",
+			"toNode": "opteeos",
+			"label": "BL2 loads + verifies BL32"
+		},
+		{
+			"id": "e7",
+			"fromNode": "tfa",
+			"toNode": "uboot",
+			"label": "BL2 loads + verifies BL33"
+		},
+		{
+			"id": "e8",
+			"fromNode": "uboot",
+			"toNode": "buildroot",
+			"label": "boots rootfs"
+		},
+		{
+			"id": "e9",
+			"fromNode": "opteeos",
+			"toNode": "client",
+			"label": "GP Client API via SMC"
+		},
+		{
+			"id": "e10",
+			"fromNode": "tfa",
+			"toNode": "secboot",
+			"label": "documented by"
+		},
+		{
+			"id": "e11",
+			"fromNode": "opteeos",
+			"toNode": "coldboot",
+			"label": "documented by"
+		},
+		{
+			"id": "e12",
+			"fromNode": "opteeos",
+			"toNode": "normsec",
+			"label": "documented by"
+		},
+		{
+			"id": "e13",
+			"fromNode": "tfa",
+			"toNode": "normsec",
+			"label": "documented by"
+		},
+		{
+			"id": "e14",
+			"fromNode": "bootflow",
+			"toNode": "secboot"
+		},
+		{
+			"id": "e15",
+			"fromNode": "bootflow",
+			"toNode": "coldboot"
+		},
+		{
+			"id": "e16",
+			"fromNode": "bootflow",
+			"toNode": "normsec"
+		},
+		{
+			"id": "e17",
+			"fromNode": "bootflow",
+			"toNode": "buildsys"
+		},
+		{
+			"id": "e18",
+			"fromNode": "codingstd",
+			"toNode": "contrib",
+			"label": "related"
+		}
+	]
+}

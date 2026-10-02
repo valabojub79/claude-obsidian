@@ -1,0 +1,311 @@
+{
+	"nodes": [
+		{
+			"id": "grp-steps",
+			"type": "group",
+			"label": "Session Lifecycle (chronological) \u2192",
+			"x": -1824,
+			"y": -444,
+			"width": 3228,
+			"height": 208,
+			"color": "1"
+		},
+		{
+			"id": "grp-pages",
+			"type": "group",
+			"label": "Wiki Pages",
+			"x": -1824,
+			"y": -204,
+			"width": 2488,
+			"height": 118,
+			"color": "3"
+		},
+		{
+			"id": "title",
+			"type": "text",
+			"text": "# OP-TEE TA Session Lifecycle\nProcedural graph: a client opening a session, invoking a command, and closing it. Left to right is chronological.",
+			"x": -1824,
+			"y": -614,
+			"width": 3228,
+			"height": 120
+		},
+		{
+			"id": "st-open",
+			"type": "text",
+			"text": "**Normal world**\n`TEEC_OpenSession()`",
+			"x": -1800,
+			"y": -420,
+			"width": 260,
+			"height": 120,
+			"color": "4"
+		},
+		{
+			"id": "st-dispatch-open",
+			"type": "text",
+			"text": "**OP-TEE OS**\n`tee_ta_open_session()` dispatch",
+			"x": -1440,
+			"y": -420,
+			"width": 260,
+			"height": 120,
+			"color": "5"
+		},
+		{
+			"id": "st-ldelf",
+			"type": "text",
+			"text": "**ldelf**\nLoads the TA ELF\n(first open only)",
+			"x": -1080,
+			"y": -420,
+			"width": 260,
+			"height": 120,
+			"color": "5"
+		},
+		{
+			"id": "st-ta-open",
+			"type": "text",
+			"text": "**TA**\n`TA_CreateEntryPoint` +\n`TA_OpenSessionEntryPoint`",
+			"x": -720,
+			"y": -420,
+			"width": 260,
+			"height": 140,
+			"color": "5"
+		},
+		{
+			"id": "st-invoke-client",
+			"type": "text",
+			"text": "**Normal world**\n`TEEC_InvokeCommand()`",
+			"x": -340,
+			"y": -420,
+			"width": 260,
+			"height": 120,
+			"color": "4"
+		},
+		{
+			"id": "st-dispatch-invoke",
+			"type": "text",
+			"text": "**OP-TEE OS**\n`tee_ta_invoke_command()`",
+			"x": 20,
+			"y": -420,
+			"width": 260,
+			"height": 120,
+			"color": "5"
+		},
+		{
+			"id": "st-ta-invoke",
+			"type": "text",
+			"text": "**TA**\n`TA_InvokeCommandEntryPoint`",
+			"x": 380,
+			"y": -420,
+			"width": 260,
+			"height": 120,
+			"color": "5"
+		},
+		{
+			"id": "st-close-client",
+			"type": "text",
+			"text": "**Normal world**\n`TEEC_CloseSession()`",
+			"x": 740,
+			"y": -420,
+			"width": 260,
+			"height": 120,
+			"color": "4"
+		},
+		{
+			"id": "st-close-ta",
+			"type": "text",
+			"text": "**OP-TEE OS -> TA**\n`tee_ta_close_session()` ->\n`TA_CloseSessionEntryPoint`\n(+ `TA_DestroyEntryPoint` if last session)",
+			"x": 1100,
+			"y": -420,
+			"width": 280,
+			"height": 160,
+			"color": "5"
+		},
+		{
+			"id": "f-clientapi",
+			"type": "text",
+			"x": -1800,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[GlobalPlatform Client API Model]]**"
+		},
+		{
+			"id": "f-sessionlife",
+			"type": "text",
+			"x": -1440,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[TA Session Lifecycle]]**"
+		},
+		{
+			"id": "f-ldelf",
+			"type": "text",
+			"x": -1080,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[ldelf TA Loader]]**"
+		},
+		{
+			"id": "f-taprops",
+			"type": "text",
+			"x": -720,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[TA Properties and Manifest]]**"
+		},
+		{
+			"id": "f-example",
+			"type": "text",
+			"x": -360,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[Example TA Structure]]**"
+		},
+		{
+			"id": "f-talib",
+			"type": "text",
+			"x": 20,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[TA Library Stack]]**"
+		},
+		{
+			"id": "f-shm",
+			"type": "text",
+			"x": 380,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[Shared Memory Model]]**"
+		}
+	],
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "st-open",
+			"fromSide": "right",
+			"toNode": "st-dispatch-open",
+			"toSide": "left"
+		},
+		{
+			"id": "e2",
+			"fromNode": "st-dispatch-open",
+			"fromSide": "right",
+			"toNode": "st-ldelf",
+			"toSide": "left",
+			"label": "first open only"
+		},
+		{
+			"id": "e3",
+			"fromNode": "st-ldelf",
+			"fromSide": "right",
+			"toNode": "st-ta-open",
+			"toSide": "left"
+		},
+		{
+			"id": "e4",
+			"fromNode": "st-ta-open",
+			"fromSide": "right",
+			"toNode": "st-invoke-client",
+			"toSide": "left",
+			"label": "session open"
+		},
+		{
+			"id": "e5",
+			"fromNode": "st-invoke-client",
+			"fromSide": "right",
+			"toNode": "st-dispatch-invoke",
+			"toSide": "left"
+		},
+		{
+			"id": "e6",
+			"fromNode": "st-dispatch-invoke",
+			"fromSide": "right",
+			"toNode": "st-ta-invoke",
+			"toSide": "left"
+		},
+		{
+			"id": "e7",
+			"fromNode": "st-ta-invoke",
+			"fromSide": "right",
+			"toNode": "st-close-client",
+			"toSide": "left",
+			"label": "caller decides when done"
+		},
+		{
+			"id": "e7b",
+			"fromNode": "st-ta-invoke",
+			"fromSide": "top",
+			"toNode": "st-invoke-client",
+			"toSide": "top",
+			"label": "repeat InvokeCommand (0+ times)"
+		},
+		{
+			"id": "e8",
+			"fromNode": "st-close-client",
+			"fromSide": "right",
+			"toNode": "st-close-ta",
+			"toSide": "left"
+		},
+		{
+			"id": "e9",
+			"fromNode": "st-open",
+			"fromSide": "bottom",
+			"toNode": "f-clientapi",
+			"toSide": "top"
+		},
+		{
+			"id": "e10",
+			"fromNode": "st-dispatch-open",
+			"fromSide": "bottom",
+			"toNode": "f-sessionlife",
+			"toSide": "top"
+		},
+		{
+			"id": "e11",
+			"fromNode": "st-ldelf",
+			"fromSide": "bottom",
+			"toNode": "f-ldelf",
+			"toSide": "top"
+		},
+		{
+			"id": "e12",
+			"fromNode": "st-ta-open",
+			"fromSide": "bottom",
+			"toNode": "f-taprops",
+			"toSide": "top"
+		},
+		{
+			"id": "e13",
+			"fromNode": "st-ta-invoke",
+			"fromSide": "bottom",
+			"toNode": "f-example",
+			"toSide": "top"
+		},
+		{
+			"id": "e14",
+			"fromNode": "st-close-ta",
+			"fromSide": "bottom",
+			"toNode": "f-shm",
+			"toSide": "top"
+		},
+		{
+			"id": "e15",
+			"fromNode": "st-ta-open",
+			"fromSide": "top",
+			"toNode": "f-talib",
+			"toSide": "top"
+		}
+	]
+}

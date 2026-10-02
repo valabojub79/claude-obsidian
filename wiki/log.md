@@ -23,6 +23,28 @@ Entry format: `## [YYYY-MM-DD] operation | Title`
 
 ---
 
+## [2026-10-02] scaffold (parallel) | OP-TEE domain completion (core, TAs, crypto/storage, client/test, platform/hardening)
+- Follow-up to the same-day boot-flow/build-system pass below. Scope: the rest of OP-TEE's architecture, split across 5 parallel research-and-write agents, each reserved a non-overlapping address block and grounded in real source (grep/read before citing any function/file name) plus the matching upstream architecture.html doc.
+- Pages created (24): entities [[optee_test]] (c-000105), [[optee_examples]] (c-000106); concepts (22) -- [[Memory Management]] (c-000060), [[The Pager]] (c-000061), [[Thread Model and RPC]] (c-000062), [[Shared Memory Model]] (c-000063), [[Interrupts and Notifications]] (c-000064), [[Pseudo-TA vs User-Mode TA]] (c-000075), [[ldelf TA Loader]] (c-000076), [[TA Properties and Manifest]] (c-000077), [[TA Session Lifecycle]] (c-000078), [[TA Storage and Loading]] (c-000079), [[OP-TEE Crypto Architecture]] (c-000090), [[Secure Storage Architecture]] (c-000091), [[Storage Key Hierarchy]] (c-000092), [[Hash Tree Anti-Rollback]] (c-000093), [[GlobalPlatform Client API Model]] (c-000107), [[xtest Test Framework]] (c-000108), [[TA Library Stack]] (c-000109), [[Example TA Structure]] (c-000110), [[Device Tree in OP-TEE]] (c-000120), [[Platform Porting]] (c-000121), [[Hardening ASLR and Stack Canaries]] (c-000122), [[Virtualization and SPMC]] (c-000123)
+- Pages updated: [[index]], [[concepts/_index]], [[entities/_index]], [[log]], [[hot]] (this entry). `sources/_index` untouched -- no new source docs ingested this pass, only source-code/doc cross-checks.
+- Addresses: c-000060 through c-000064, c-000075 through c-000079, c-000090 through c-000093, c-000105 through c-000110, c-000120 through c-000123 (24 of 60 reserved slots used; gaps are intentional headroom, not missing pages).
+- Post-merge fixes: 2 broken wikilinks found and fixed ([[Libraries]] -> [[TA Library Stack]] in `OP-TEE OS.md`; [[ldelf]] -> [[ldelf TA Loader\|ldelf]] in `TA Library Stack.md`). Verified zero em dashes and zero address collisions across all 24 new files before merging.
+- Key insight: the pager's existence (why BL32 ships as 3 separate images, documented back in [[OP-TEE Boot Flow]]) and the TA session lifecycle's S-EL1->S-EL0 switch are the two threads that tie almost every other new page together -- memory management, threading, and secure storage all ultimately exist to support loading and running a TA safely.
+- Not yet covered: no dedicated deep pages yet for the GP TEE Internal Core API from the TA's own point of view (what a TA calls, as opposed to how it's hosted), or for specific crypto algorithm implementations. Flagged for a future pass if needed.
+
+## [2026-10-02] ingest + scaffold | OP-TEE learning domain (boot flow & build system)
+- Sources: 3 pages fetched from optee.readthedocs.io (contribute, coding_standards, license_headers), plus direct inspection of the user's real checkout at `/home/bhaskarv/optee/` (build/*.mk, optee_os/core/arch/arm/kernel/{entry_a64.S,boot.c}, optee_os/scripts/checkpatch*.sh)
+- Summaries: [[optee-contribute-guide]], [[optee-coding-standards]], [[optee-license-headers]]
+- Pages created (17): 3 source pages; entities [[OP-TEE Build Repo]], [[Trusted Firmware-A]], [[OP-TEE OS]], [[U-Boot]], [[Buildroot]], [[optee_client]], [[QEMU]] (7); concepts [[OP-TEE Boot Flow]] (hub), [[OP-TEE Build System]], [[Secure Boot Chain of Trust]], [[Normal World vs Secure World]], [[TEE Core Cold Boot]], [[OP-TEE Coding Standards]], [[OP-TEE Contribution Workflow]] (7)
+- Canvases created (2): `wiki/canvases/optee-boot-flow.canvas` (procedural: QEMU→BL1→BL2→BL32→BL33→Linux chain with linked file cards), `wiki/canvases/optee-component-map.canvas` (context graph: entity/concept relationships)
+- Pages updated: [[index]], [[concepts/_index]], [[entities/_index]], [[sources/_index]], [[log]], [[hot]]
+- Addresses: c-000043 through c-000059
+- Key insight: the BL1/BL2/BL32/BL33 naming and the `ln -sf` symlink block in `build/qemu_v8.mk` directly explain the `ln -sf .../bl1.bin .../bl2.bin .../bl32.bin ...` lines the user saw in their original build log, before they hit the separate WSL PATH-with-spaces Buildroot failure (fixed earlier this session via a `~/.bashrc` PATH filter).
+- Also applied: retrofit em-dash (" — ") usages in these 19 new files to colons, per this vault's documented style preference (no em dashes) found in [[hot]].
+- Not yet done: 3 OP-TEE-specific skills (code review, feature design, contribution workflow) for the `/home/bhaskarv/optee` project — tracked as next step, not part of this vault.
+
+---
+
 ## [2026-05-22] batch ingest | Leadership Styles (5-source survey)
 - Sources: `.raw/articles/common-leadership-styles-with-pros-and-cons-2026-05-22.md`, `determine-your-leadership-style-harvard-2026-05-22.md`, `leadership-styles-imd-2026-05-22.md`, `leadership-styles-managing-life-at-work-2026-05-22.md`, `leadership-styles-simply-psychology-2026-05-22.md`
 - Summaries: [[leadership-styles-muse]], [[determine-your-leadership-style-harvard]], [[leadership-styles-imd]], [[leadership-styles-managing-life-at-work]], [[leadership-styles-simply-psychology]]

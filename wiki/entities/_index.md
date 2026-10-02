@@ -46,4 +46,20 @@ All entity pages — people, organizations, products, and tools.
 
 ---
 
+## OP-TEE
+
+Pages live in `wiki/entities/optee/`. Ground truth: this machine's real checkout at `/home/bhaskarv/optee/` (the `OP-TEE/build` repo manifest).
+
+- [[OP-TEE Build Repo]] — github.com/OP-TEE/build; repo-tool manifest + Makefiles orchestrating the whole checkout
+- [[Trusted Firmware-A]] — BL1/BL2(/BL31); ARM's reference secure-boot firmware
+- [[OP-TEE OS]] — the TEE itself, BL32
+- [[U-Boot]] — BL33, normal-world bootloader
+- [[Buildroot]] — normal-world rootfs builder for the QEMU target
+- [[optee_client]] — libteec + tee-supplicant, GP Client API
+- [[QEMU]] — emulated qemu_armv8a target board
+- [[optee_test]] — xtest runner + ta/ test-TA collection
+- [[optee_examples]] — reference host/TA example pairs (hello_world, aes, acipher, secure_storage, ...)
+
+---
+
 ## Add new entities here as they are identified during ingests.

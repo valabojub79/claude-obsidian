@@ -11,14 +11,17 @@
             "id": "d9f94f992e74a310",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "sources/courage-to-be-disliked.md",
-                "mode": "source",
-                "source": false
+                "file": "canvases/optee-component-map.canvas",
+                "viewState": {
+                  "x": -285,
+                  "y": -320,
+                  "zoom": -0.5027157163660974
+                }
               },
-              "icon": "lucide-file",
-              "title": "courage-to-be-disliked"
+              "icon": "lucide-layout-dashboard",
+              "title": "optee-component-map"
             }
           }
         ]
@@ -185,6 +188,8 @@
   },
   "active": "d9f94f992e74a310",
   "lastOpenFiles": [
+    "canvases/main.canvas",
+    "sources/courage-to-be-disliked.md",
     "hot.md.tmp.10834.fd09fae2409b",
     "entities/courage-to-be-disliked/Fumitake Koga.md",
     "entities/courage-to-be-disliked/Ichiro Kishimi.md",
@@ -208,7 +213,6 @@
     "log.md.tmp.10834.0683242235c9",
     "log.md.tmp.10834.3a725f56f66e",
     "sources/_index.md.tmp.10834.e14a316e9fb5",
-    "entities/_index.md.tmp.10834.805e5575f38f",
     "entities/NVM Express Consortium.md",
     "concepts/NVMe over Fabrics.md",
     "concepts/NVMe Namespaces.md",
@@ -216,14 +220,12 @@
     "concepts/NVMe.md",
     "sources/nvme-base-spec-2.3.md",
     "index.md",
-    "sources/courage-to-be-disliked.md",
     "concepts/Inferiority Feelings.md",
     "entities/Alfred Adler.md",
     "concepts/Community Feeling.md",
     "concepts/Compounding Knowledge.md",
     "canvases/youtube-explainer.canvas",
     "canvases/welcome.canvas",
-    "canvases/main.canvas",
     "canvases/claude-obsidian-presentation.canvas",
     "Wiki Map.canvas"
   ]

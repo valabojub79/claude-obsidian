@@ -1,0 +1,173 @@
+{
+	"nodes": [
+		{
+			"id": "grp-boot",
+			"type": "group",
+			"label": "Boot Trust",
+			"x": -724,
+			"y": -724,
+			"width": 308,
+			"height": 278,
+			"color": "6"
+		},
+		{
+			"id": "grp-hardening",
+			"type": "group",
+			"label": "Runtime Hardening",
+			"x": -154,
+			"y": -724,
+			"width": 328,
+			"height": 278,
+			"color": "2"
+		},
+		{
+			"id": "grp-crypto-storage",
+			"type": "group",
+			"label": "Crypto & Secure Storage",
+			"x": 256,
+			"y": -724,
+			"width": 648,
+			"height": 478,
+			"color": "4"
+		},
+		{
+			"id": "title",
+			"type": "text",
+			"text": "# OP-TEE Security Architecture\nContext graph: secure boot, crypto, storage, and hardening as layered, mostly-independent defenses.",
+			"x": -724,
+			"y": -894,
+			"width": 1628,
+			"height": 120
+		},
+		{
+			"id": "tfa",
+			"type": "text",
+			"x": -700,
+			"y": -700,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[Trusted Firmware-A]]**"
+		},
+		{
+			"id": "secboot",
+			"type": "text",
+			"x": -700,
+			"y": -550,
+			"width": 260,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Secure Boot Chain of Trust]]**"
+		},
+		{
+			"id": "opteeos",
+			"type": "text",
+			"x": -130,
+			"y": -700,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[OP-TEE OS]]**"
+		},
+		{
+			"id": "hardening",
+			"type": "text",
+			"x": -130,
+			"y": -550,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Hardening ASLR and Stack Canaries]]**"
+		},
+		{
+			"id": "crypto",
+			"type": "text",
+			"x": 440,
+			"y": -700,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[OP-TEE Crypto Architecture]]**"
+		},
+		{
+			"id": "storage",
+			"type": "text",
+			"x": 440,
+			"y": -500,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Secure Storage Architecture]]**"
+		},
+		{
+			"id": "keyhier",
+			"type": "text",
+			"x": 280,
+			"y": -350,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Storage Key Hierarchy]]**"
+		},
+		{
+			"id": "hashtree",
+			"type": "text",
+			"x": 600,
+			"y": -350,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Hash Tree Anti-Rollback]]**"
+		}
+	],
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "tfa",
+			"toNode": "secboot",
+			"label": "implements Trusted Board Boot"
+		},
+		{
+			"id": "e2",
+			"fromNode": "opteeos",
+			"toNode": "hardening",
+			"label": "compiled-in defense (ASLR, canaries)"
+		},
+		{
+			"id": "e3",
+			"fromNode": "opteeos",
+			"toNode": "crypto",
+			"label": "hosts the crypto abstraction"
+		},
+		{
+			"id": "e4",
+			"fromNode": "secboot",
+			"toNode": "hardening",
+			"label": "defense-in-depth sibling, not a dependency"
+		},
+		{
+			"id": "e5",
+			"fromNode": "storage",
+			"toNode": "keyhier",
+			"label": "encrypts via"
+		},
+		{
+			"id": "e6",
+			"fromNode": "storage",
+			"toNode": "hashtree",
+			"label": "protects integrity via"
+		},
+		{
+			"id": "e7",
+			"fromNode": "keyhier",
+			"toNode": "crypto",
+			"label": "derivation uses crypto primitives"
+		},
+		{
+			"id": "e8",
+			"fromNode": "crypto",
+			"toNode": "storage",
+			"label": "underlies"
+		}
+	]
+}
