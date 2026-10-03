@@ -13,15 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sources/courage-to-be-disliked.md",
+                "file": "Wiki Map.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "courage-to-be-disliked"
+              "title": "Wiki Map"
+            }
+          },
+          {
+            "id": "2c15d4683a85e38d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -41,7 +52,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -183,8 +196,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "d9f94f992e74a310",
+  "active": "2c15d4683a85e38d",
   "lastOpenFiles": [
+    "Trading AI.md",
+    "Financial Flow AI app.md",
+    "Wiki Map.md",
+    "Wiki Map.canvas",
+    "sources/courage-to-be-disliked.md",
+    "ISB- Certificate Programme in Leadership with AI",
     "hot.md.tmp.10834.fd09fae2409b",
     "entities/courage-to-be-disliked/Fumitake Koga.md",
     "entities/courage-to-be-disliked/Ichiro Kishimi.md",
@@ -207,8 +226,6 @@
     "hot.md.tmp.10834.2be800f7c938",
     "log.md.tmp.10834.0683242235c9",
     "log.md.tmp.10834.3a725f56f66e",
-    "sources/_index.md.tmp.10834.e14a316e9fb5",
-    "entities/_index.md.tmp.10834.805e5575f38f",
     "entities/NVM Express Consortium.md",
     "concepts/NVMe over Fabrics.md",
     "concepts/NVMe Namespaces.md",
@@ -216,15 +233,11 @@
     "concepts/NVMe.md",
     "sources/nvme-base-spec-2.3.md",
     "index.md",
-    "sources/courage-to-be-disliked.md",
     "concepts/Inferiority Feelings.md",
     "entities/Alfred Adler.md",
-    "concepts/Community Feeling.md",
-    "concepts/Compounding Knowledge.md",
     "canvases/youtube-explainer.canvas",
     "canvases/welcome.canvas",
     "canvases/main.canvas",
-    "canvases/claude-obsidian-presentation.canvas",
-    "Wiki Map.canvas"
+    "canvases/claude-obsidian-presentation.canvas"
   ]
 }
