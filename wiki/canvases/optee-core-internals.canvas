@@ -1,0 +1,179 @@
+{
+	"nodes": [
+		{
+			"id": "grp-entry",
+			"type": "group",
+			"label": "Entry Points",
+			"x": -724,
+			"y": -724,
+			"width": 1468,
+			"height": 128,
+			"color": "6"
+		},
+		{
+			"id": "grp-memory",
+			"type": "group",
+			"label": "Memory & Paging",
+			"x": -724,
+			"y": -524,
+			"width": 308,
+			"height": 278,
+			"color": "2"
+		},
+		{
+			"id": "grp-exec",
+			"type": "group",
+			"label": "Execution & IPC",
+			"x": -154,
+			"y": -524,
+			"width": 898,
+			"height": 278,
+			"color": "4"
+		},
+		{
+			"id": "title",
+			"type": "text",
+			"text": "# OP-TEE Core Internals\nContext graph: how memory, threading, and interrupt/notification mechanisms relate inside OP-TEE OS.",
+			"x": -724,
+			"y": -894,
+			"width": 1468,
+			"height": 120
+		},
+		{
+			"id": "opteeos",
+			"type": "text",
+			"x": -130,
+			"y": -700,
+			"width": 260,
+			"height": 80,
+			"color": "6",
+			"text": "**[[OP-TEE OS]]**"
+		},
+		{
+			"id": "coldboot",
+			"type": "text",
+			"x": -700,
+			"y": -700,
+			"width": 260,
+			"height": 80,
+			"color": "2",
+			"text": "**[[TEE Core Cold Boot]]**"
+		},
+		{
+			"id": "normsec",
+			"type": "text",
+			"x": 440,
+			"y": -700,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Normal World vs Secure World]]**"
+		},
+		{
+			"id": "memmgmt",
+			"type": "text",
+			"x": -700,
+			"y": -500,
+			"width": 260,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Memory Management]]**"
+		},
+		{
+			"id": "pager",
+			"type": "text",
+			"x": -700,
+			"y": -350,
+			"width": 260,
+			"height": 80,
+			"color": "2",
+			"text": "**[[The Pager]]**"
+		},
+		{
+			"id": "thread",
+			"type": "text",
+			"x": -130,
+			"y": -500,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Thread Model and RPC]]**"
+		},
+		{
+			"id": "shm",
+			"type": "text",
+			"x": -130,
+			"y": -350,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Shared Memory Model]]**"
+		},
+		{
+			"id": "interrupts",
+			"type": "text",
+			"x": 440,
+			"y": -500,
+			"width": 280,
+			"height": 80,
+			"color": "2",
+			"text": "**[[Interrupts and Notifications]]**"
+		}
+	],
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "coldboot",
+			"toNode": "memmgmt",
+			"label": "init_primary sets up heap/MMU"
+		},
+		{
+			"id": "e2",
+			"fromNode": "opteeos",
+			"toNode": "memmgmt",
+			"label": "documented by"
+		},
+		{
+			"id": "e3",
+			"fromNode": "opteeos",
+			"toNode": "thread",
+			"label": "documented by"
+		},
+		{
+			"id": "e4",
+			"fromNode": "opteeos",
+			"toNode": "interrupts",
+			"label": "documented by"
+		},
+		{
+			"id": "e5",
+			"fromNode": "memmgmt",
+			"toNode": "pager",
+			"label": "pager allocates via tee_mm"
+		},
+		{
+			"id": "e6",
+			"fromNode": "pager",
+			"toNode": "coldboot",
+			"label": "BL32 3-image split, see Boot Flow"
+		},
+		{
+			"id": "e7",
+			"fromNode": "normsec",
+			"toNode": "thread",
+			"label": "SMC entry drives thread dispatch"
+		},
+		{
+			"id": "e8",
+			"fromNode": "thread",
+			"toNode": "shm",
+			"label": "RPC payload allocation uses mobj"
+		},
+		{
+			"id": "e9",
+			"fromNode": "interrupts",
+			"toNode": "thread",
+			"label": "notifications ride the RPC path"
+		}
+	]
+}

@@ -56,4 +56,14 @@ Leadership-styles survey, ingested 2026-05-22 (five sources; Forbes and VeryWell
 
 ---
 
+## Documentation
+
+OP-TEE official docs (optee.readthedocs.io), fetched 2026-10-02:
+
+- [[optee-contribute-guide]] — DCO, commit format, fork+PR+rebase workflow
+- [[optee-coding-standards]] — checkpatch, GP CamelCase exception, variable init rule
+- [[optee-license-headers]] — SPDX header rules for new/imported files
+
+---
+
 ## Add new sources here after each ingest.

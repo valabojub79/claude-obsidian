@@ -1,0 +1,298 @@
+{
+	"nodes": [
+		{
+			"id": "grp-stages",
+			"type": "group",
+			"label": "Boot Stages (chronological) \u2192",
+			"x": -1816,
+			"y": -436,
+			"width": 2172,
+			"height": 232,
+			"color": "1"
+		},
+		{
+			"id": "grp-pages",
+			"type": "group",
+			"label": "Wiki Pages",
+			"x": -1816,
+			"y": -196,
+			"width": 2172,
+			"height": 282,
+			"color": "3"
+		},
+		{
+			"id": "title",
+			"type": "text",
+			"text": "# OP-TEE Boot Flow (qemu_v8 target)\nProcedural graph: left to right is chronological. File cards below each stage link to the wiki pages with full detail.",
+			"x": -1816,
+			"y": -606,
+			"width": 2172,
+			"height": 120
+		},
+		{
+			"id": "st-qemu",
+			"type": "text",
+			"text": "**QEMU**\n`-bios bl1.bin`\nEmulated qemu_armv8a board loads BL1 into SRAM, jumps to EL3.",
+			"x": -1800,
+			"y": -420,
+			"width": 260,
+			"height": 160,
+			"color": "4"
+		},
+		{
+			"id": "st-bl1",
+			"type": "text",
+			"text": "**BL1** (TF-A)\nROM-stage trust anchor. Loads + authenticates BL2.",
+			"x": -1440,
+			"y": -420,
+			"width": 260,
+			"height": 160,
+			"color": "5"
+		},
+		{
+			"id": "st-bl2",
+			"type": "text",
+			"text": "**BL2** (TF-A)\nLoads + authenticates BL32 and BL33. Boots BL32 first.",
+			"x": -1080,
+			"y": -420,
+			"width": 260,
+			"height": 160,
+			"color": "5"
+		},
+		{
+			"id": "st-bl32",
+			"type": "text",
+			"text": "**BL32 = OP-TEE OS**\nSecure world, S-EL1.\n3 images: bl32.bin / bl32_extra1.bin / bl32_extra2.bin\nCold-boots TEE core, then idles for SMCs.",
+			"x": -720,
+			"y": -420,
+			"width": 280,
+			"height": 200,
+			"color": "5"
+		},
+		{
+			"id": "st-bl33",
+			"type": "text",
+			"text": "**BL33 = U-Boot**\nNormal world. Loads Linux + rootfs.",
+			"x": -340,
+			"y": -420,
+			"width": 260,
+			"height": 160,
+			"color": "4"
+		},
+		{
+			"id": "st-linux",
+			"type": "text",
+			"text": "**Linux userspace**\ntee-supplicant, xtest, examples talk to the TEE via SMC.",
+			"x": 60,
+			"y": -420,
+			"width": 280,
+			"height": 160,
+			"color": "4"
+		},
+		{
+			"id": "f-bootflow",
+			"type": "text",
+			"x": -1800,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[OP-TEE Boot Flow]]**"
+		},
+		{
+			"id": "f-qemu",
+			"type": "text",
+			"x": -1800,
+			"y": -90,
+			"width": 260,
+			"height": 70,
+			"color": "6",
+			"text": "**[[QEMU]]**"
+		},
+		{
+			"id": "f-tfa",
+			"type": "text",
+			"x": -1440,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "6",
+			"text": "**[[Trusted Firmware-A]]**"
+		},
+		{
+			"id": "f-secboot",
+			"type": "text",
+			"x": -1080,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "2",
+			"text": "**[[Secure Boot Chain of Trust]]**"
+		},
+		{
+			"id": "f-opteeos",
+			"type": "text",
+			"x": -720,
+			"y": -180,
+			"width": 280,
+			"height": 70,
+			"color": "6",
+			"text": "**[[OP-TEE OS]]**"
+		},
+		{
+			"id": "f-coldboot",
+			"type": "text",
+			"x": -720,
+			"y": -90,
+			"width": 280,
+			"height": 70,
+			"color": "2",
+			"text": "**[[TEE Core Cold Boot]]**"
+		},
+		{
+			"id": "f-normsec",
+			"type": "text",
+			"x": -720,
+			"y": 0,
+			"width": 280,
+			"height": 70,
+			"color": "2",
+			"text": "**[[Normal World vs Secure World]]**"
+		},
+		{
+			"id": "f-uboot",
+			"type": "text",
+			"x": -340,
+			"y": -180,
+			"width": 260,
+			"height": 70,
+			"color": "6",
+			"text": "**[[U-Boot]]**"
+		},
+		{
+			"id": "f-buildroot",
+			"type": "text",
+			"x": 60,
+			"y": -180,
+			"width": 280,
+			"height": 70,
+			"color": "6",
+			"text": "**[[Buildroot]]**"
+		},
+		{
+			"id": "f-client",
+			"type": "text",
+			"x": 60,
+			"y": -90,
+			"width": 280,
+			"height": 70,
+			"color": "6",
+			"text": "**[[optee_client]]**"
+		}
+	],
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "st-qemu",
+			"fromSide": "right",
+			"toNode": "st-bl1",
+			"toSide": "left",
+			"label": "boot ROM image"
+		},
+		{
+			"id": "e2",
+			"fromNode": "st-bl1",
+			"fromSide": "right",
+			"toNode": "st-bl2",
+			"toSide": "left",
+			"label": "loads + verifies"
+		},
+		{
+			"id": "e3",
+			"fromNode": "st-bl2",
+			"fromSide": "right",
+			"toNode": "st-bl32",
+			"toSide": "left",
+			"label": "loads + verifies, boots first"
+		},
+		{
+			"id": "e4",
+			"fromNode": "st-bl32",
+			"fromSide": "right",
+			"toNode": "st-bl33",
+			"toSide": "left",
+			"label": "returns control (SMC)"
+		},
+		{
+			"id": "e5",
+			"fromNode": "st-bl33",
+			"fromSide": "right",
+			"toNode": "st-linux",
+			"toSide": "left",
+			"label": "loads kernel + rootfs"
+		},
+		{
+			"id": "e6",
+			"fromNode": "st-qemu",
+			"fromSide": "bottom",
+			"toNode": "f-bootflow",
+			"toSide": "top"
+		},
+		{
+			"id": "e7",
+			"fromNode": "st-bl1",
+			"fromSide": "bottom",
+			"toNode": "f-tfa",
+			"toSide": "top"
+		},
+		{
+			"id": "e8",
+			"fromNode": "st-bl2",
+			"fromSide": "bottom",
+			"toNode": "f-secboot",
+			"toSide": "top"
+		},
+		{
+			"id": "e9",
+			"fromNode": "st-bl32",
+			"fromSide": "bottom",
+			"toNode": "f-opteeos",
+			"toSide": "top"
+		},
+		{
+			"id": "e10",
+			"fromNode": "st-bl32",
+			"fromSide": "bottom",
+			"toNode": "f-coldboot",
+			"toSide": "top"
+		},
+		{
+			"id": "e11",
+			"fromNode": "st-bl32",
+			"fromSide": "bottom",
+			"toNode": "f-normsec",
+			"toSide": "top"
+		},
+		{
+			"id": "e12",
+			"fromNode": "st-bl33",
+			"fromSide": "bottom",
+			"toNode": "f-uboot",
+			"toSide": "top"
+		},
+		{
+			"id": "e13",
+			"fromNode": "st-linux",
+			"fromSide": "bottom",
+			"toNode": "f-buildroot",
+			"toSide": "top"
+		},
+		{
+			"id": "e14",
+			"fromNode": "st-linux",
+			"fromSide": "bottom",
+			"toNode": "f-client",
+			"toSide": "top"
+		}
+	]
+}

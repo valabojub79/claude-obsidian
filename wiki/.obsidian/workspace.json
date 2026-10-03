@@ -11,28 +11,20 @@
             "id": "d9f94f992e74a310",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Wiki Map.md",
-                "mode": "source",
-                "source": false
+                "file": "canvases/optee-component-map.canvas",
+                "viewState": {
+                  "x": -285,
+                  "y": -320,
+                  "zoom": -0.5027157163660974
+                }
               },
-              "icon": "lucide-file",
-              "title": "Wiki Map"
-            }
-          },
-          {
-            "id": "2c15d4683a85e38d",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-layout-dashboard",
+              "title": "optee-component-map"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -52,9 +44,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -196,14 +186,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "2c15d4683a85e38d",
+  "active": "d9f94f992e74a310",
   "lastOpenFiles": [
-    "Trading AI.md",
-    "Financial Flow AI app.md",
-    "Wiki Map.md",
-    "Wiki Map.canvas",
+    "canvases/main.canvas",
     "sources/courage-to-be-disliked.md",
-    "ISB- Certificate Programme in Leadership with AI",
     "hot.md.tmp.10834.fd09fae2409b",
     "entities/courage-to-be-disliked/Fumitake Koga.md",
     "entities/courage-to-be-disliked/Ichiro Kishimi.md",
@@ -226,6 +212,7 @@
     "hot.md.tmp.10834.2be800f7c938",
     "log.md.tmp.10834.0683242235c9",
     "log.md.tmp.10834.3a725f56f66e",
+    "sources/_index.md.tmp.10834.e14a316e9fb5",
     "entities/NVM Express Consortium.md",
     "concepts/NVMe over Fabrics.md",
     "concepts/NVMe Namespaces.md",
@@ -235,9 +222,11 @@
     "index.md",
     "concepts/Inferiority Feelings.md",
     "entities/Alfred Adler.md",
+    "concepts/Community Feeling.md",
+    "concepts/Compounding Knowledge.md",
     "canvases/youtube-explainer.canvas",
     "canvases/welcome.canvas",
-    "canvases/main.canvas",
-    "canvases/claude-obsidian-presentation.canvas"
+    "canvases/claude-obsidian-presentation.canvas",
+    "Wiki Map.canvas"
   ]
 }
