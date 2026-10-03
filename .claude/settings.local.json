@@ -40,7 +40,27 @@
       "Bash(echo \"peek: $\\(./scripts/allocate-address.sh --peek \\)\")",
       "Bash(command -v python3)",
       "Bash(./scripts/tiling-check.py --peek)",
-      "Bash(echo \"tiling peek exit: $?\")"
+      "Bash(echo \"tiling peek exit: $?\")",
+      "Bash(git ls-tree *)",
+      "Bash(git -c core.protectNTFS=false ls-files --stage)",
+      "Bash(git -c core.protectNTFS=false ls-tree -r HEAD)",
+      "Bash(git diff-index *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(echo \"cached exit: $?\")",
+      "Bash(echo \"readme cached exit: $?\")",
+      "Bash(echo \"exit $?\")",
+      "Bash(grep \"^100644.*[^/]$\")",
+      "Bash(awk '{print $4}')",
+      "Bash(sort -k4)",
+      "Bash(awk '$3 != 0 {print $3, $4}')",
+      "Bash(awk '$3 != \"0\"')",
+      "Bash(git -c core.protectNTFS=false diff --cached --name-status)",
+      "Bash(git update-index *)",
+      "Bash(git write-tree *)",
+      "Bash(git merge *)",
+      "Bash(git -c core.protectNTFS=false ls-tree -r 9667e87)",
+      "Bash(git -c core.protectNTFS=false ls-tree -r 730daac)",
+      "Bash(git *)"
     ]
   }
 }
