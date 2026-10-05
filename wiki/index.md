@@ -23,7 +23,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-10-02 | Total pages: 112 | Sources ingested: 10
+Last updated: 2026-10-04 | Total pages: 113 | Sources ingested: 11
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[getting-started]]
 
@@ -138,6 +138,7 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 - [[optee-contribute-guide]] — 2026-10-02 | optee.readthedocs.io | DCO, commit format, fork+PR+rebase workflow
 - [[optee-coding-standards]] — 2026-10-02 | optee.readthedocs.io | checkpatch, GP CamelCase exception, variable init rule
 - [[optee-license-headers]] — 2026-10-02 | optee.readthedocs.io | SPDX header rules for new/imported files
+- [[deepaksood619-wiki]] — 2026-10-04 | github.com/deepaksood619/deepaksood619.github.io | external mirror, ~2900 notes, not synthesized
 
 ---
 

@@ -38,6 +38,14 @@ All source pages — summaries of ingested documents, transcripts, articles, and
 
 ---
 
+## External Mirrors
+
+Raw third-party content kept for reference, not synthesized into concept/entity pages.
+
+- [[deepaksood619-wiki]] — Deepak Sood's personal wiki (MIT). ~2,900 notes across CS/AI/ML/databases/algorithms/economics/psychology/etc. Mirrored as-is at `external/deepak-notes/`, not wikilinked into this vault's graph.
+
+---
+
 ## Articles
 
 Leadership-styles survey, ingested 2026-05-22 (five sources; Forbes and VeryWellMind blocked the crawler and were not ingested):

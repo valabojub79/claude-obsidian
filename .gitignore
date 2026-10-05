@@ -16,6 +16,10 @@
 .obsidian-git-data
 .trash/
 
+# External reference mirrors — third-party content, not ours to version.
+# See wiki/sources/deepaksood619-wiki.md for what this is and why it's here.
+external/
+
 # System
 .DS_Store
 Thumbs.db
