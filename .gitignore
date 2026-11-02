@@ -111,3 +111,10 @@ _attachments/
 .vault-meta/.tiling.lock
 .vault-meta/tiling-cache.json
 .vault-meta/tiling-cache.*.tmp
+
+# Windows download metadata (alternate data streams copied by WSL)
+*:Zone.Identifier
+
+# Nested wiki vault: plugin settings may hold API keys; vector caches are regenerable
+wiki/.obsidian/plugins/*/data.json
+wiki/.obsidian/plugins/*/vectors/
