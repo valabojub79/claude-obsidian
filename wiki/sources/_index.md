@@ -22,6 +22,15 @@ All source pages — summaries of ingested documents, transcripts, articles, and
 
 ---
 
+## Repositories (deep learning, 2026-11-02)
+
+- [[deeplearning-ai-summary]]: Mahmoud Badry's notes on Andrew Ng's Deep Learning Specialization (MIT)
+- [[lisa-deep-learning-tutorials]]: LISA lab (Mila) Theano tutorials (BSD)
+- [[deeplearning-papernotes]]: Denny Britz's 99 paper notes. Index: [[sources/dl-papers/_index|Paper Notes Index]]; reading list: [[deep-learning-reading-list]]
+- [[ai-notes]]: yuvraaj2002's AI/ML interview-preparation notes
+
+---
+
 ## Books
 
 - [[courage-to-be-disliked]] — Koga + Kishimi (2013 / Hinglish). Adlerian psychology as Socratic dialogue; 5 nights covering teleology, task separation, community feeling.

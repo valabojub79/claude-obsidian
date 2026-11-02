@@ -24,6 +24,9 @@ All entity pages — people, organizations, products, and tools.
 
 ## People
 
+- [[Andrew Ng]]: DeepLearning.AI founder; instructor of the Deep Learning Specialization
+- [[Yoshua Bengio]]: Université de Montréal; LISA lab / Mila; attention and pretraining pioneer
+- [[Denny Britz]]: author of the deep learning paper notes and the WildML blog
 - [[Andrej Karpathy]] — AI researcher, educator; originated the LLM Wiki pattern
 - [[Alfred Adler]] — Austrian psychiatrist (1870-1937); founder of Individual Psychology (Adlerian Psychology)
 - [[Ichiro Kishimi]] — Japanese philosopher; Adlerian counselor and translator; co-author of The Courage to be Disliked
@@ -63,3 +66,7 @@ Pages live in `wiki/entities/optee/`. Ground truth: this machine's real checkout
 ---
 
 ## Add new entities here as they are identified during ingests.
+
+## Tools (deep learning)
+
+- [[Theano]]: LISA lab symbolic autodiff and GPU library (2007-2017); used by the LISA tutorials

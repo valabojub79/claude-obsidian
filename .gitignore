@@ -118,3 +118,6 @@ _attachments/
 # Nested wiki vault: plugin settings may hold API keys; vector caches are regenerable
 wiki/.obsidian/plugins/*/data.json
 wiki/.obsidian/plugins/*/vectors/
+
+# Third-party repo snapshots used as ingest sources (re-fetchable; some unlicensed, repo is public)
+.raw/repos/

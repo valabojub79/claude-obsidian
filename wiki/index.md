@@ -23,7 +23,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-10-02 | Total pages: 112 | Sources ingested: 10
+Last updated: 2026-11-02 | Total pages: 417 | Sources ingested: 14
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[getting-started]]
 
@@ -31,6 +31,7 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Concepts
 
+- **Deep learning and ML (2026-11-02)**: 233 concept pages, listed in [[concepts/deep-learning/_index|Deep Learning Concepts]] (DLAI + LISA, 66) and [[concepts/ai-notes/_index|AI-Notes Concepts]] (ML, stats, GenAI, Python, SQL, DSA, system design; 101). Start at [[Deep Learning]].
 - [[Leadership Style]] — hub: behavior patterns leaders adopt; no single best style, effectiveness is contextual (status: developing)
 - [[Lewin's Leadership Styles]] — foundational 1939 typology: autocratic, democratic, laissez-faire (status: developing)
 - [[Autocratic Leadership]] — leader decides alone, expects compliance; fast but stifling (status: developing)
@@ -99,6 +100,10 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Entities
 
+- [[Andrew Ng]]: DLAI specialization instructor (status: developing)
+- [[Yoshua Bengio]]: LISA lab / Mila founder; attention, pretraining (status: developing)
+- [[Denny Britz]]: author of the deep learning paper notes (status: developing)
+- [[Theano]]: LISA's symbolic autodiff library (2007-2017) (status: developing)
 - [[Kurt Lewin]] — social psychologist; 1939 study that founded the study of leadership styles (status: developing)
 - [[Bernard M. Bass]] — scholar who formalized transformational vs transactional leadership (status: developing)
 - [[Robert K. Greenleaf]] — coined servant leadership ("The Servant as Leader", 1970) (status: developing)
@@ -128,6 +133,10 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 
 ## Sources
 
+- [[deeplearning-ai-summary]]: 2026-11-02 | mbadry1, MIT | Andrew Ng's 5-course specialization notes | 50 pages
+- [[lisa-deep-learning-tutorials]]: 2026-11-02 | LISA lab / Mila, BSD | Theano tutorials | 21 pages
+- [[deeplearning-papernotes]]: 2026-11-02 | Denny Britz | 99 paper pages ([[sources/dl-papers/_index|Paper Notes]]) + [[deep-learning-reading-list]]
+- [[ai-notes]]: 2026-11-02 | yuvraaj2002 | interview notes: ML, stats, GenAI, Python, SQL, DSA | 101 pages + merges
 - [[leadership-styles-muse]] — 2026-05-22 | The Muse, Kat Boogaard | 10-style catalog
 - [[determine-your-leadership-style-harvard]] — 2026-05-22 | Harvard DCE, Lian Parsons | style is not predetermined
 - [[leadership-styles-imd]] — 2026-05-22 | IMD | 6 styles + leadership agility
@@ -165,5 +174,8 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 ---
 
 ## Domains
+
+- [[Deep Learning]]: hub for deep learning and ML, built 2026-11-02 from 4 GitHub repos (DLAI summary, LISA tutorials, Denny Britz paper notes, AI-Notes); 290 pages. Sub-indexes: [[concepts/deep-learning/_index|Deep Learning Concepts]], [[concepts/ai-notes/_index|AI-Notes Concepts]], [[sources/dl-papers/_index|Paper Notes]] (status: developing)
+- [[OP-TEE Boot Flow]]: hub for the Trusted Execution (OP-TEE) domain (status: developing)
 
 <!-- Add domain entries here after scaffold -->

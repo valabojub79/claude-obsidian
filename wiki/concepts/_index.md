@@ -128,4 +128,13 @@ Hub page for the whole domain: [[OP-TEE Boot Flow]].
 
 ---
 
+## Deep Learning and Machine Learning
+
+Ingested 2026-11-02 from 4 repos. Hub: [[Deep Learning]].
+
+- [[concepts/deep-learning/_index|Deep Learning Concepts Index]]: 66 pages in `wiki/concepts/deep-learning/` (DLAI courses 1-5, LISA tutorials, merged AI-Notes perspectives)
+- [[concepts/ai-notes/_index|AI-Notes Concepts Index]]: 101 pages in `wiki/concepts/ai-notes/` (GenAI and RAG, classical ML, ML practice, statistics, Python, databases and SQL, DSA, system design, career)
+
+---
+
 ## Add new concepts here as they are extracted from sources.
