@@ -83,6 +83,7 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[Wiki Map]] | [[
 - [[TA Storage and Loading]] — early/REE-FS/secure-storage TA sources, signature/encryption formats (status: developing)
 - [[OP-TEE Crypto Architecture]] — crypto.h abstraction, LibTomCrypt (default) vs Mbed TLS, drvcrypt HW hook (status: developing)
 - [[Secure Storage Architecture]] — REE FS vs RPMB backends, tee_svc_storage.c syscall layer (status: developing)
+- [[spi-nor-driver|SPI-NOR Driver for OP-TEE]] — proposal: spi-mem + SFDP SPI-NOR core, RPMC driver, SPI-NOR FS storage backend (status: developing)
 - [[Storage Key Hierarchy]] — HUK → SSK → TSK → FEK derivation chain (status: developing)
 - [[Hash Tree Anti-Rollback]] — dual-versioned hash tree vs RPMB write-counter, what each protects against (status: developing)
 - [[GlobalPlatform Client API Model]] — TEEC_* call sequence, Operation/Parameter/SharedMemory shapes (status: developing)

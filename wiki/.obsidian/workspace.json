@@ -11,20 +11,32 @@
             "id": "d9f94f992e74a310",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "canvases/optee-component-map.canvas",
-                "viewState": {
-                  "x": -285,
-                  "y": -320,
-                  "zoom": -0.5027157163660974
-                }
+                "file": "Wiki Map.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "optee-component-map"
+              "icon": "lucide-file",
+              "title": "Wiki Map"
+            }
+          },
+          {
+            "id": "2c15d4683a85e38d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "concepts/Compounding Knowledge.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Compounding Knowledge"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -44,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -167,13 +181,23 @@
               "icon": "lucide-list",
               "title": "Outline of boundary-frontier-2026-04-24"
             }
+          },
+          {
+            "id": "3740ae986cdad36f",
+            "type": "leaf",
+            "state": {
+              "type": "deep-notes-view",
+              "state": {},
+              "icon": "triangle",
+              "title": "Deep notes"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,50 +207,56 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "deep-notes:Open deep notes": false
     }
   },
-  "active": "d9f94f992e74a310",
+  "active": "2c15d4683a85e38d",
   "lastOpenFiles": [
+    "canvases/optee-ta-lifecycle.canvas",
+    "Financial Flow AI app.md",
+    "getting-started.md",
+    "index.md",
+    "log.md",
+    "overview.md",
+    "Wiki Map.md",
+    "Wiki Map.canvas",
+    "hot.md",
+    "concepts/optee/spi-nor-driver.md",
+    "canvases/optee-boot-flow.canvas",
+    "entities/optee/OP-TEE OS.md",
+    "canvases/optee-security-architecture.canvas",
+    "canvases/welcome.canvas",
+    "canvases/youtube-explainer.canvas",
+    "canvases/optee-component-map.canvas",
     "canvases/main.canvas",
-    "sources/courage-to-be-disliked.md",
+    "canvases/claude-obsidian-presentation.canvas",
+    "sources/optee-coding-standards.md",
+    "sources/optee-contribute-guide.md",
+    "sources/optee-license-headers.md",
+    "canvases/optee-core-internals.canvas",
+    "entities/optee/U-Boot.md",
+    "entities/optee/optee_client.md",
+    "entities/optee/Trusted Firmware-A.md",
+    "entities/optee/QEMU.md",
+    "entities/optee/optee_test.md",
+    "entities/optee/optee_examples.md",
+    "entities/optee/OP-TEE Build Repo.md",
+    "entities/optee/Buildroot.md",
+    "entities/optee",
+    "concepts/optee/xtest Test Framework.md",
+    "concepts/optee/Virtualization and SPMC.md",
+    "concepts/optee/Thread Model and RPC.md",
+    "concepts/optee/The Pager.md",
+    "concepts/optee/TEE Core Cold Boot.md",
+    "concepts/optee",
+    "ISB- Certificate Programme in Leadership with AI",
     "hot.md.tmp.10834.fd09fae2409b",
-    "entities/courage-to-be-disliked/Fumitake Koga.md",
-    "entities/courage-to-be-disliked/Ichiro Kishimi.md",
-    "entities/courage-to-be-disliked/Alfred Adler.md",
-    "concepts/courage-to-be-disliked/Inferiority Feelings.md",
-    "concepts/courage-to-be-disliked/Community Feeling.md",
-    "concepts/courage-to-be-disliked/Separation of Tasks.md",
-    "concepts/courage-to-be-disliked/Teleology vs Etiology.md",
-    "concepts/courage-to-be-disliked/Adlerian Psychology.md",
-    "entities/nvme/NVM Express Consortium.md",
-    "concepts/nvme/NVMe over Fabrics.md",
-    "concepts/nvme/NVMe Namespaces.md",
-    "concepts/nvme/NVMe Queue Model.md",
-    "concepts/nvme/NVMe.md",
     "entities/courage-to-be-disliked",
     "entities/nvme",
     "concepts/courage-to-be-disliked",
     "concepts/nvme",
     "hot.md.tmp.10834.a74625b12e2d",
-    "hot.md.tmp.10834.2be800f7c938",
-    "log.md.tmp.10834.0683242235c9",
-    "log.md.tmp.10834.3a725f56f66e",
-    "sources/_index.md.tmp.10834.e14a316e9fb5",
-    "entities/NVM Express Consortium.md",
-    "concepts/NVMe over Fabrics.md",
-    "concepts/NVMe Namespaces.md",
-    "concepts/NVMe Queue Model.md",
-    "concepts/NVMe.md",
-    "sources/nvme-base-spec-2.3.md",
-    "index.md",
-    "concepts/Inferiority Feelings.md",
-    "entities/Alfred Adler.md",
-    "concepts/Community Feeling.md",
-    "concepts/Compounding Knowledge.md",
-    "canvases/youtube-explainer.canvas",
-    "canvases/welcome.canvas",
-    "canvases/claude-obsidian-presentation.canvas",
-    "Wiki Map.canvas"
+    "hot.md.tmp.10834.2be800f7c938"
   ]
 }

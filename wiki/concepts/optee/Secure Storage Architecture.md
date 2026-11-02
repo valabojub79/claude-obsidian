@@ -82,3 +82,5 @@ Secure storage is the clearest example of the [[Normal World vs Secure World]] s
 actually surfacing in a TA-visible API: every persistent-object call crosses the
 world boundary at least once (RPC to tee-supplicant), even though the TA code calling
 `TEE_WriteObjectData()` has no idea that's happening.
+
+See also: [[spi-nor-driver|SPI-NOR Driver for OP-TEE]], a proposed third backend (SPI-NOR FS) with RPMC-based rollback protection.

@@ -1,0 +1,963 @@
+/*
+ * Deep Notes — Custom Theme
+ * Dark + Warm Amber/Gold
+ * Self-contained: does not depend on Obsidian theme variables
+ */
+
+/* ── Palette ──
+ * bg-deep:     #0f0820  (near-black warm)
+ * bg-surface:  rgba(255, 255, 255, 0.06)  (card surface)
+ * bg-raised:   rgba(255, 255, 255, 0.05)  (raised elements)
+ * bg-hover:    rgba(255, 255, 255, 0.08)  (hover state)
+ * border:      rgba(192, 132, 252, 0.15)  (subtle border)
+ * border-glow: #c8a24e  (amber accent)
+ * accent:      #d4a843  (warm gold)
+ * accent-soft: #b8923a  (muted gold)
+ * text:        #faf5ff  (warm white)
+ * text-muted:  #a78bfa  (warm grey)
+ * text-dim:    rgba(196, 181, 253, 0.5)  (dimmed)
+ * green:       #7ec47e  (success)
+ * yellow:      #d4a843  (warning / partial)
+ * red:         #c75c5c  (error / incorrect)
+ */
+
+body .workspace-leaf[data-type="deep-notes-view"] .view-content {
+	background-color: #0f0820;
+}
+
+.deep-notes-container-root {
+	min-height: 100%;
+	background-color: #0f0820;
+}
+
+.deep-notes-container {
+	padding: 12px;
+	position: relative;
+	background-color: #0f0820;
+	color: var(--text-normal);
+}
+
+.deep-notes-header h4 {
+	margin: 0 0 10px 0;
+	color: #faf5ff;
+}
+
+.deep-notes-mode-row {
+	margin-bottom: 14px;
+}
+
+.deep-notes-mode-pills {
+	display: flex;
+	gap: 2px;
+	padding: 4px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	border-radius: 10px;
+}
+
+.deep-notes-mode-pill {
+	flex: 1;
+	padding: 5px 8px;
+	border: none;
+	border-radius: 7px;
+	background: transparent;
+	color: #c4b5fd;
+	font-size: 0.85em;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deep-notes-mode-pill.active {
+	background: rgba(232, 121, 249, 0.15);
+	color: #e879f9;
+	box-shadow: 0 0 10px rgba(232, 121, 249, 0.22);
+}
+
+.deep-notes-mode-pill:hover:not(.active) {
+	background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Button Layout ── */
+
+.deep-notes-btn-row {
+	display: flex;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+.deep-notes-btn-row .deep-notes-generate-btn {
+	flex: 1;
+}
+
+.deep-notes-btn-stack {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.deep-notes-btn-stack > .deep-notes-generate-btn:not(.deep-notes-scan-btn):not(.deep-notes-history-btn) {
+	grid-column: 1 / -1;
+	padding: 14px 20px;
+	font-size: 16px;
+	min-height: 52px;
+	justify-content: center;
+}
+
+/* ── Buttons ── */
+
+
+.deep-notes-generate-btn {
+	width: 100%;
+	padding: 8px 16px;
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.05);
+	color: #faf5ff;
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	border-radius: 8px;
+	font-size: 14px;
+	box-shadow: none;
+	transition: box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+	text-align: left;
+}
+
+.deep-notes-generate-btn:hover {
+	background-color: rgba(255, 255, 255, 0.08);
+	border-color: rgba(192, 132, 252, 0.3);
+	box-shadow: 0 0 12px rgba(192, 132, 252, 0.15);
+}
+
+.deep-notes-icon-btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+}
+
+.deep-notes-btn-icon {
+	display: flex;
+	align-items: center;
+}
+
+.deep-notes-btn-icon svg {
+	width: 16px;
+	height: 16px;
+	color: #e879f9;
+}
+
+.deep-notes-container .deep-notes-regenerate {
+	min-height: 36px;
+	padding: 6px 14px;
+	font-size: 13px;
+	text-align: left;
+	border-left: 2px solid rgba(192, 132, 252, 0.35);
+	border-radius: 6px;
+	background: transparent;
+	border-color: transparent;
+	color: #c4b5fd;
+}
+
+.deep-notes-container .deep-notes-regenerate:hover {
+	background: rgba(192, 132, 252, 0.07);
+	color: #faf5ff;
+}
+
+/* ── Loading ── */
+
+.deep-notes-loading {
+	text-align: center;
+	color: #a78bfa;
+	padding: 24px 0;
+	font-style: italic;
+}
+
+/* ── Flowchart Guide ── */
+
+.deep-notes-flowchart {
+	margin-top: 20px;
+	padding: 16px 12px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	border-radius: 10px;
+}
+
+.deep-notes-flowchart-title {
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	color: #c084fc;
+	margin: 0 0 14px 0;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.deep-notes-flowchart-title::before {
+	content: "›";
+	color: #c084fc;
+	font-size: 16px;
+	line-height: 12px;
+	flex-shrink: 0;
+	position: relative;
+	top: -1px;
+}
+
+.deep-notes-flow-node {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 10px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(192, 132, 252, 0.1);
+	transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deep-notes-flow-node:hover {
+	background: rgba(255, 255, 255, 0.11);
+	box-shadow: 0 0 8px rgba(192, 132, 252, 0.12);
+}
+
+.deep-notes-flow-icon {
+	flex-shrink: 0;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	background: rgba(168, 85, 247, 0.15);
+	border: 1px solid rgba(168, 85, 247, 0.28);
+}
+
+.deep-notes-flow-icon svg {
+	width: 15px;
+	height: 15px;
+	color: #c084fc;
+}
+
+.deep-notes-flow-text {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	min-width: 0;
+}
+
+.deep-notes-flow-label {
+	font-size: 13px;
+	font-weight: 600;
+	color: #faf5ff;
+}
+
+.deep-notes-flow-desc {
+	font-size: 11px;
+	color: #c4b5fd;
+	opacity: 0.7;
+	line-height: 1.3;
+}
+
+.deep-notes-flow-connector {
+	width: 2px;
+	height: 12px;
+	margin: 0 auto;
+	background: rgba(192, 132, 252, 0.25);
+	border-radius: 1px;
+}
+
+/* ── Cards ── */
+
+.deep-notes-card {
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(192, 132, 252, 0.08);
+	border-radius: 10px;
+	padding: 12px;
+	margin-bottom: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deep-notes-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.deep-notes-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 4px;
+}
+
+.deep-notes-locate-btn {
+	border: 1px solid rgba(192, 132, 252, 0.3);
+	border-radius: 4px;
+	padding: 2px 6px;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 1;
+	background: transparent;
+	color: #c084fc;
+}
+
+.deep-notes-locate-btn:hover {
+	background: rgba(168, 85, 247, 0.1);
+	transform: scale(1.1);
+}
+
+/* ── Badges ── */
+
+.deep-notes-badge {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 2px 8px;
+	border-radius: 4px;
+	margin-bottom: 6px;
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	color: #a78bfa;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.deep-notes-badge-knowledge-expansion {
+	background-color: rgba(168, 85, 247, 0.1);
+	border-color: rgba(168, 85, 247, 0.2);
+	color: #c084fc;
+}
+
+.deep-notes-badge-suggestion {
+	background-color: rgba(126, 196, 126, 0.1);
+	border-color: rgba(126, 196, 126, 0.2);
+	color: #7ec47e;
+}
+
+.deep-notes-badge-cross-topic {
+	background-color: rgba(140, 160, 210, 0.1);
+	border-color: rgba(140, 160, 210, 0.2);
+	color: #8ca0d2;
+}
+
+/* ── Text & Inputs ── */
+
+.deep-notes-text {
+	margin: 8px 0;
+	color: #faf5ff;
+	line-height: 1.5;
+}
+
+.deep-notes-response {
+	width: 100%;
+	box-sizing: border-box;
+	resize: vertical;
+	padding: 8px;
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	border-radius: 6px;
+	background-color: #0f0820;
+	color: #faf5ff;
+	font-family: inherit;
+	font-size: 13px;
+	margin-bottom: 8px;
+	transition: border-color 0.2s ease;
+}
+
+.deep-notes-response:focus {
+	outline: none;
+	border-color: rgba(168, 85, 247, 0.4);
+	box-shadow: 0 0 6px rgba(168, 85, 247, 0.1);
+}
+
+.deep-notes-add-btn {
+	padding: 10px 12px;
+	min-height: 44px;
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.05);
+	color: #faf5ff;
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	border-radius: 6px;
+	font-size: 13px;
+	transition: background-color 0.2s ease;
+}
+
+.deep-notes-add-btn:hover {
+	background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Evaluate ── */
+
+/* ── Score ── */
+
+.deep-notes-score-section {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 16px;
+}
+
+.deep-notes-score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.deep-notes-score.score-green {
+	background-color: rgba(126, 196, 126, 0.12);
+	border: 3px solid #7ec47e;
+}
+
+.deep-notes-score.score-yellow {
+	background-color: rgba(212, 168, 67, 0.12);
+	border: 3px solid #d4a843;
+}
+
+.deep-notes-score.score-red {
+	background-color: rgba(199, 92, 92, 0.12);
+	border: 3px solid #c75c5c;
+}
+
+.deep-notes-score-value {
+	font-size: 36px;
+	font-weight: 800;
+	color: #faf5ff;
+	line-height: 1;
+}
+
+.deep-notes-score-label {
+	font-size: 11px;
+	color: #a78bfa;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-top: 4px;
+}
+
+/* ── Summary ── */
+
+.deep-notes-summary {
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(192, 132, 252, 0.06);
+	border-radius: 8px;
+	padding: 12px;
+	margin-bottom: 16px;
+	color: #faf5ff;
+	line-height: 1.5;
+	font-size: 13px;
+}
+
+/* ── Feedback Cards ── */
+
+.deep-notes-feedback-card {
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(192, 132, 252, 0.06);
+	border-radius: 10px;
+	padding: 12px;
+	margin-bottom: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deep-notes-feedback-card:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.deep-notes-feedback-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.deep-notes-individual-score {
+	font-size: 12px;
+	font-weight: 600;
+	opacity: 0.8;
+}
+
+.deep-notes-individual-score.rating-correct {
+	color: #7ec47e;
+}
+
+.deep-notes-individual-score.rating-partial {
+	color: #d4a843;
+}
+
+.deep-notes-individual-score.rating-incorrect {
+	color: #c75c5c;
+}
+
+.deep-notes-rating-badge.rating-correct {
+	background-color: rgba(126, 196, 126, 0.15);
+	border-color: rgba(126, 196, 126, 0.25);
+	color: #7ec47e;
+}
+
+.deep-notes-rating-badge.rating-partial {
+	background-color: rgba(212, 168, 67, 0.15);
+	border-color: rgba(212, 168, 67, 0.25);
+	color: #d4a843;
+}
+
+.deep-notes-rating-badge.rating-incorrect {
+	background-color: rgba(199, 92, 92, 0.15);
+	border-color: rgba(199, 92, 92, 0.25);
+	color: #c75c5c;
+}
+
+.deep-notes-feedback-question {
+	font-weight: 600;
+	margin-bottom: 4px;
+	color: #faf5ff;
+}
+
+.deep-notes-feedback-explanation {
+	color: #a78bfa;
+	font-size: 13px;
+	line-height: 1.4;
+	margin: 4px 0 0 0;
+}
+
+/* ── Schedule ── */
+
+.deep-notes-schedule-btn {
+	margin-top: 16px;
+}
+
+.deep-notes-schedule-btn small {
+	opacity: 0.8;
+	font-weight: 400;
+}
+
+/* ── Settings Warning ── */
+
+.deep-notes-setting-warning {
+	margin: 8px 0 16px;
+	padding: 8px 10px;
+	border-radius: 6px;
+	border: 1px solid rgba(168, 85, 247, 0.2);
+	background: rgba(168, 85, 247, 0.06);
+	color: #c084fc;
+	font-size: 12px;
+	line-height: 1.4;
+}
+
+/* ── Source Note Link ── */
+
+.deep-notes-source-link {
+	display: block;
+	font-size: 12px;
+	color: #c084fc;
+	margin-bottom: 8px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.deep-notes-source-link:hover {
+	text-decoration: underline;
+	color: #d8b4fe;
+}
+
+/* ── Index Status ── */
+
+.deep-notes-index-status {
+	margin-top: 16px;
+	padding: 12px;
+	background-color: rgba(30, 26, 22, 0.5);
+	border-radius: 8px;
+	border: 1px solid rgba(192, 132, 252, 0.06);
+}
+
+.deep-notes-index-notice {
+	color: #a78bfa;
+	font-size: 13px;
+	margin: 0 0 8px 0;
+}
+
+.deep-notes-index-ready {
+	color: #7ec47e;
+	font-size: 13px;
+	margin: 0;
+}
+
+.deep-notes-index-btn {
+	margin-top: 4px;
+}
+
+.fading-out {
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	pointer-events: none;
+}
+
+.deep-notes-btn-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+
+/* ── History ── */
+
+.deep-notes-history-btn,
+.deep-notes-scan-btn {
+	background-color: rgba(255, 255, 255, 0.05);
+	color: #c4b5fd;
+	border-color: rgba(192, 132, 252, 0.15);
+	padding: 12px 12px;
+	min-height: 44px;
+	justify-content: center;
+}
+
+.deep-notes-history-btn:hover,
+.deep-notes-scan-btn:hover {
+	background-color: rgba(255, 255, 255, 0.08);
+}
+
+.deep-notes-history-btn .deep-notes-btn-icon svg,
+.deep-notes-scan-btn .deep-notes-btn-icon svg {
+	color: #c084fc;
+}
+
+.deep-notes-history-title {
+	margin: 12px 0 8px 0;
+	color: #a78bfa;
+}
+
+.deep-notes-history-card {
+	cursor: default;
+}
+
+.deep-notes-history-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6px;
+}
+
+.deep-notes-history-date {
+	font-size: 12px;
+	color: #a78bfa;
+}
+
+.deep-notes-history-score {
+	font-size: 12px;
+	font-weight: 700;
+	padding: 2px 10px;
+	border-radius: 10px;
+}
+
+.deep-notes-history-summary {
+	margin: 0 0 8px 0;
+	font-size: 13px;
+	color: #a78bfa;
+}
+
+.deep-notes-history-actions {
+	display: flex;
+	gap: 8px;
+}
+
+/* ── Image Picker ── */
+
+.deep-notes-image-picker {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.deep-notes-picker-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.deep-notes-picker-title {
+	margin: 0 0 4px 0;
+	font-size: 14px;
+	color: #faf5ff;
+}
+
+.deep-notes-picker-controls {
+	display: flex;
+	gap: 8px;
+}
+
+.deep-notes-picker-action {
+	background: none;
+	border: none;
+	color: #c084fc;
+	cursor: pointer;
+	font-size: 12px;
+	padding: 2px 4px;
+	text-decoration: underline;
+}
+
+.deep-notes-picker-action:hover {
+	color: #d8b4fe;
+}
+
+.deep-notes-picker-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	max-height: 200px;
+	overflow-y: auto;
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	border-radius: 6px;
+	padding: 6px;
+	background: #0f0820;
+}
+
+.deep-notes-picker-row {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	padding: 4px 6px;
+	border-radius: 4px;
+}
+
+.deep-notes-picker-row:hover {
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.deep-notes-picker-label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	font-size: 13px;
+	color: #faf5ff;
+}
+
+.deep-notes-picker-checkbox {
+	flex-shrink: 0;
+	accent-color: #c084fc;
+}
+
+.deep-notes-picker-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.deep-notes-picker-badge {
+	flex-shrink: 0;
+	font-size: 10px;
+	padding: 1px 5px;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.05);
+	color: #a78bfa;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.deep-notes-picker-badge-img {
+	background: rgba(255, 255, 255, 0.05);
+	color: #a78bfa;
+}
+
+.deep-notes-picker-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 4px;
+}
+
+.deep-notes-picker-actions .deep-notes-generate-btn {
+	flex: 1;
+	min-width: 0;
+	text-align: center;
+	padding: 8px 12px;
+	font-size: 13px;
+	box-sizing: border-box;
+}
+
+/* ── Delete Button ── */
+
+.deep-notes-delete-btn {
+	background-color: rgba(199, 92, 92, 0.12);
+	color: #c75c5c;
+	border: 1px solid rgba(199, 92, 92, 0.25);
+}
+
+.deep-notes-delete-btn:hover {
+	background-color: rgba(199, 92, 92, 0.22);
+}
+
+/* ── Suggested Answer ── */
+
+.deep-notes-suggested-answer {
+	margin-top: 8px;
+	border: 1px solid rgba(192, 132, 252, 0.15);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.deep-notes-suggested-answer summary {
+	cursor: pointer;
+	padding: 6px 10px;
+	font-size: 13px;
+	font-weight: 500;
+	color: #c084fc;
+	background-color: rgba(255, 255, 255, 0.06);
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.deep-notes-suggested-answer summary:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.deep-notes-suggested-answer-text {
+	padding: 8px 10px;
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.5;
+	color: #faf5ff;
+	background-color: rgba(255, 255, 255, 0.06);
+	border-top: 1px solid rgba(192, 132, 252, 0.15);
+}
+
+/* ── Scrollbar ── */
+
+.deep-notes-container::-webkit-scrollbar {
+	width: 6px;
+}
+
+.deep-notes-container::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.deep-notes-container::-webkit-scrollbar-thumb {
+	background: rgba(192, 132, 252, 0.2);
+	border-radius: 3px;
+}
+
+.deep-notes-container::-webkit-scrollbar-thumb:hover {
+	background: rgba(192, 132, 252, 0.35);
+}
+/* ── Go Deeper Feature ── */
+
+.deep-notes-sub-questions {
+	margin-top: 12px;
+	position: relative;
+}
+
+.deep-notes-sub-card {
+	background: rgba(255, 255, 255, 0.03); /* Subtle contrast against parent */
+	border: 1px solid rgba(192, 132, 252, 0.1);
+	box-shadow: none;
+}
+
+.deep-notes-sub-card:hover {
+	background: rgba(255, 255, 255, 0.05);
+	transform: none; /* Disable lift effect for sub-cards to avoid clutter */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Utility classes to replace inline styles ── */
+
+.deep-notes-sub-card-indent {
+	margin-left: 20px;
+	width: calc(100% - 20px);
+}
+
+.deep-notes-card-bordered {
+	border-left: 4px solid var(--card-border-color, rgba(192, 132, 252, 0.15));
+}
+
+.deep-notes-clear-session-btn,
+.deep-notes-evaluate-btn,
+.deep-notes-export-btn {
+	padding: 12px 16px;
+	min-height: 44px;
+	font-size: 14px;
+	text-align: center;
+	justify-content: center;
+	margin-bottom: 8px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.deep-notes-btn-row-bottom {
+	margin-top: 16px;
+	display: flex;
+	gap: 8px;
+}
+
+.deep-notes-btn-row-bottom .deep-notes-generate-btn {
+	padding: 12px 16px;
+	min-height: 44px;
+	justify-content: center;
+}
+
+.deep-notes-deeper-btn {
+	margin-left: 8px;
+}
+
+.deep-notes-locate-btn-colored {
+	background-color: var(--locate-bg, transparent);
+	border-color: var(--locate-border, rgba(192, 132, 252, 0.3));
+}
+
+/* Settings warning text (replaces inline style.color, style.marginBottom, style.fontSize) */
+.deep-notes-setting-warning-text {
+	color: var(--text-error);
+	margin-bottom: 10px;
+	font-size: 0.9em;
+}
+
+.deep-notes-picker-count {
+	font-size: 12px;
+	color: #a78bfa;
+	text-align: center;
+}
+
+/* ── Flashcard Flip ── */
+
+.deep-notes-flashcard-wrapper {
+	perspective: 1000px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.deep-notes-flashcard-inner {
+	display: grid;
+	grid-template-areas: "card";
+	transform-style: preserve-3d;
+	transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+	border-radius: 10px;
+}
+
+.deep-notes-flashcard-inner.flipped {
+	transform: rotateY(180deg);
+}
+
+.deep-notes-flashcard-face {
+	grid-area: card;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid var(--card-border-color, rgba(192, 132, 252, 0.15));
+	border-radius: 10px;
+	padding: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.deep-notes-flashcard-back {
+	transform: rotateY(180deg);
+}
+
+.deep-notes-flashcard-hint {
+	font-size: 11px;
+	color: #c4b5fd;
+	opacity: 0.45;
+	text-align: center;
+	margin: 10px 0 0 0;
+}
